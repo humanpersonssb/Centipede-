@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cyrhkpu3leicw"]
+
+[ext_resource type="Script" uid="uid://6bsaiow8xt7c" path="res://centipede.gd" id="1_7nw6g"]
+
+[node name="Centipede" type="Node2D" unique_id=1704024713]
+script = ExtResource("1_7nw6g")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=491448981]
