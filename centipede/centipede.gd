@@ -24,7 +24,7 @@ var spiky_textures = [
 ]
 
 var gradiant_texture = preload("res://assets/gradient_inner.png")
-
+var leg_texture = preload("res://assets/leg_lowerarm.png")
 
 func setup(data):
 	segment_count = data.segments
@@ -52,12 +52,31 @@ func setup(data):
 		overlay.texture = gradiant_texture
 		overlay.scale = Vector2.ONE
 		overlay.modulate = data.secondary_color
+		overlay.material = CanvasItemMaterial.new()
+		overlay.material.blend_mode = CanvasItemMaterial.BLEND_MODE_ADD
 		sprite.add_child(overlay)
 		
-		
-		
-		
 		add_child(sprite)
+		
+		
+		
+		#legs
+		var left_leg = Sprite2D.new()
+		left_leg.texture = leg_texture
+		left_leg.scale = Vector2.ONE *data.size*0.05*data.legs
+		left_leg.modulate = data.secondary_color
+		left_leg.offset = Vector2(0, -left_leg.texture.get_height() / 2.0)
+		add_child(left_leg)
+		
+		var right_leg = Sprite2D.new()
+		right_leg.texture = leg_texture
+		right_leg.scale = Vector2.ONE *data.size*0.05*data.legs
+		right_leg.modulate = data.secondary_color
+		right_leg.offset = Vector2(0, -left_leg.texture.get_height() / 2.0)
+		add_child(right_leg)
+		
+		
+		
 
 		segments.append({
 			"pos": position,
@@ -69,7 +88,9 @@ func setup(data):
 			"antenna": data.antenna,
 			"legs": data.legs,
 			"tail": data.tail,
-			"node": sprite
+			"node": sprite,
+			"left_leg": left_leg,
+			"right_leg": right_leg
 		})
 
 func _process(delta):
@@ -122,6 +143,22 @@ func update_sprite_transforms():
 		elif segments[i - 1].pos != seg.pos:
 			var face = (segments[i - 1].pos - seg.pos).normalized()
 			seg.node.rotation = face.angle() + PI / 2.0
+		
+		
+		#legs
+		var angle = seg.node.rotation - PI/2
+		var forward = Vector2(cos(angle),sin(angle))
+		var right = Vector2(-forward.y,forward.x)
+		var radius = 14*seg.size
+		var t = Time.get_ticks_msec() / 200.0
+		var wiggle = sin(t + i) * 0.3
+		
+		seg.left_leg.global_position = seg.pos - right * radius * 0.5
+		seg.left_leg.rotation = seg.node.rotation - PI / 2.0 + wiggle
+
+		seg.right_leg.global_position = seg.pos + right * radius * 0.5
+		seg.right_leg.rotation = seg.node.rotation + PI / 2.0 + wiggle
+		
 
 func _draw():
 	var t = Time.get_ticks_msec() / 200.0
@@ -140,23 +177,23 @@ func _draw():
 		var radius = 14.0 * size
 		
 		#angle of segment for leg placement
-		var angle = seg.node.rotation - PI / 2.0
-		var forward = Vector2(cos(angle), sin(angle))
-		var right = Vector2(-forward.y, forward.x)
+		#var angle = seg.node.rotation - PI / 2.0
+		#var forward = Vector2(cos(angle), sin(angle))
+		#var right = Vector2(-forward.y, forward.x)
 
-		#legs
-		var left_root = p - right * radius * 0.5
-		draw_line(
-			left_root,
-			left_root - right * leg_len * size * 2.0 + forward * wiggle,
-			secondary_color, 2.0
-		)
-		var right_root = p + right * radius * 0.5
-		draw_line(
-			right_root,
-			right_root + right * leg_len * size * 2.0 - forward * wiggle,
-			secondary_color, 2.0
-		)
+		#legs LINE OLD VERSION!!
+		#var left_root = p - right * radius * 0.5
+		#draw_line(
+		#	left_root,
+		#	left_root - right * leg_len * size * 2.0 + forward * wiggle,
+		#	secondary_color, 2.0
+		#)
+		#var right_root = p + right * radius * 0.5
+		#draw_line(
+		#	right_root,
+		#	right_root + right * leg_len * size * 2.0 - forward * wiggle,
+		#	secondary_color, 2.0
+		#)
 
 		if is_head:
 			draw_line(

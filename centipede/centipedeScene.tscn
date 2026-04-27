@@ -9,19 +9,19 @@ bg_color = Color(1, 1, 1, 0.24705882)
 bg_color = Color(0.1764706, 0.14117648, 0.4117647, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nyo1w"]
-bg_color = Color(0.20784314, 0.3254902, 0.3882353, 1)
+bg_color = Color(0.2784314, 0.20784314, 0.38431373, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vy4vr"]
-bg_color = Color(0.2784314, 0.20784314, 0.38431373, 1)
+bg_color = Color(0.20784314, 0.3254902, 0.3882353, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3relh"]
 bg_color = Color(0.40784314, 0.29803923, 0.39215687, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yth6m"]
-bg_color = Color(0.39215687, 0.3647059, 0.23529412, 1)
+bg_color = Color(0.1882353, 0.35686275, 0.32156864, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wia6c"]
-bg_color = Color(0.1882353, 0.35686275, 0.32156864, 1)
+bg_color = Color(0.39215687, 0.3647059, 0.23529412, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jj0sx"]
 bg_color = Color(0.22352941, 0.21176471, 0.24705882, 1)
@@ -150,9 +150,10 @@ offset_left = 20.0
 offset_top = 260.0
 offset_right = 226.0
 offset_bottom = 276.0
-min_value = 3.0
-max_value = 30.0
-value = 7.0
+min_value = 0.5
+max_value = 2.0
+step = 0.1
+value = 1.0
 
 [node name="TailSlider" type="HSlider" parent="Ui/Panel" unique_id=176631872]
 layout_mode = 0
@@ -174,18 +175,18 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_son8g")
 
 [node name="Color2" type="Button" parent="Ui/Panel" unique_id=409700063]
 layout_mode = 0
-offset_left = 82.0
-offset_top = 340.0
-offset_right = 110.0
-offset_bottom = 368.0
+offset_left = 51.0
+offset_top = 339.0
+offset_right = 79.0
+offset_bottom = 367.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_nyo1w")
 
 [node name="Color3" type="Button" parent="Ui/Panel" unique_id=405842338]
 layout_mode = 0
-offset_left = 51.0
-offset_top = 340.0
-offset_right = 79.0
-offset_bottom = 368.0
+offset_left = 82.0
+offset_top = 339.0
+offset_right = 110.0
+offset_bottom = 367.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_vy4vr")
 
 [node name="Color4" type="Button" parent="Ui/Panel" unique_id=1015465062]
@@ -198,18 +199,18 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_3relh")
 
 [node name="Color5" type="Button" parent="Ui/Panel" unique_id=1202151920]
 layout_mode = 0
-offset_left = 175.0
-offset_top = 340.0
-offset_right = 203.0
-offset_bottom = 368.0
+offset_left = 144.0
+offset_top = 339.0
+offset_right = 172.0
+offset_bottom = 367.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_yth6m")
 
 [node name="Color6" type="Button" parent="Ui/Panel" unique_id=1159979669]
 layout_mode = 0
-offset_left = 144.0
-offset_top = 340.0
-offset_right = 172.0
-offset_bottom = 368.0
+offset_left = 175.0
+offset_top = 339.0
+offset_right = 203.0
+offset_bottom = 367.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_wia6c")
 
 [node name="Color7" type="Button" parent="Ui/Panel" unique_id=1309530706]
@@ -310,17 +311,17 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_3rf72")
 
 [node name="Color10" type="Button" parent="Ui/Panel" unique_id=1836834491]
 layout_mode = 0
-offset_left = 82.0
-offset_top = 397.0
-offset_right = 110.0
-offset_bottom = 425.0
+offset_left = 51.0
+offset_top = 396.0
+offset_right = 79.0
+offset_bottom = 424.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_u0nyb")
 
 [node name="Color11" type="Button" parent="Ui/Panel" unique_id=1052797528]
 layout_mode = 0
-offset_left = 51.0
+offset_left = 82.0
 offset_top = 397.0
-offset_right = 79.0
+offset_right = 110.0
 offset_bottom = 425.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_x7rod")
 
@@ -334,18 +335,18 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_3mmab")
 
 [node name="Color13" type="Button" parent="Ui/Panel" unique_id=1175106609]
 layout_mode = 0
-offset_left = 175.0
+offset_left = 144.0
 offset_top = 397.0
-offset_right = 203.0
+offset_right = 172.0
 offset_bottom = 425.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_kjjdm")
 
 [node name="Color14" type="Button" parent="Ui/Panel" unique_id=1370378492]
 layout_mode = 0
-offset_left = 144.0
-offset_top = 397.0
-offset_right = 172.0
-offset_bottom = 425.0
+offset_left = 175.0
+offset_top = 396.0
+offset_right = 203.0
+offset_bottom = 424.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_pmio3")
 
 [node name="Color15" type="Button" parent="Ui/Panel" unique_id=550399166]
