@@ -3,9 +3,10 @@ extends Node2D
 var segments = []
 var trail = []
 var dir = Vector2.RIGHT
-var speed = 120
+var speed = 50
 var segment_count = 8
 var spacing = 18
+var target_dir = Vector2.RIGHT
 
 var smooth_textures = [
 	preload("res://assets/segment_smooth_bumps.png"),
@@ -21,6 +22,9 @@ var spiky_textures = [
 	preload("res://assets/segment_spiky_moon.png"),
 	preload("res://assets/segment_spiky_trapezoid.png"),
 ]
+
+
+
 
 func setup(data):
 	segment_count = data.segments
@@ -63,17 +67,25 @@ func _process(delta):
 	queue_redraw()
 
 var turn_timer = 0.0
+
 func move_head(delta):
 	turn_timer -= delta
 	if turn_timer <= 0:
 		turn_timer = randf_range(0.5, 2.0)
-		dir = dir.rotated(deg_to_rad(randf_range(-50, 50)))
+		target_dir = dir.rotated(deg_to_rad(randf_range(-50, 50)))
+
+
+	var turn_speed = 3.0
+	dir = dir.slerp(target_dir, turn_speed * delta)
+
 	position += dir.normalized() * speed * delta
 	var screen = get_viewport_rect().size
 	if position.x < 0 or position.x > screen.x:
 		dir.x *= -1
+		target_dir.x *= -1
 	if position.y < 0 or position.y > screen.y:
 		dir.y *= -1
+		target_dir.y *= -1
 
 func update_trail():
 	trail.insert(0, position)
@@ -99,7 +111,7 @@ func update_sprite_transforms():
 			seg.node.rotation = face.angle() + PI / 2.0
 
 func _draw():
-	var t = Time.get_ticks_msec() / 180.0
+	var t = Time.get_ticks_msec() / 200.0
 	for i in range(segment_count):
 		var seg = segments[i]
 		var p = to_local(seg.pos)
@@ -112,18 +124,24 @@ func _draw():
 		var tail_len = seg.tail
 		var wiggle = sin(t + i) * (6.0 * size)
 		var radius = 14.0 * size
+		
+		#angle of segment for leg placement
+		var angle = seg.node.rotation - PI / 2.0
+		var forward = Vector2(cos(angle), sin(angle))
+		var right = Vector2(-forward.y, forward.x)
 
+		#legs
+		var left_root = p - right * radius * 0.5
 		draw_line(
-			p + Vector2(-radius * 0.6, radius * 0.3),
-			p + Vector2(-leg_len * size, radius * 0.5 + wiggle),
-			color,
-			2.0
+			left_root,
+			left_root - right * leg_len * size * 2.0 + forward * wiggle,
+			color, 2.0
 		)
+		var right_root = p + right * radius * 0.5
 		draw_line(
-			p + Vector2(radius * 0.6, radius * 0.3),
-			p + Vector2(leg_len * size, radius * 0.5 - wiggle),
-			color,
-			2.0
+			right_root,
+			right_root + right * leg_len * size * 2.0 - forward * wiggle,
+			color, 2.0
 		)
 
 		if is_head:

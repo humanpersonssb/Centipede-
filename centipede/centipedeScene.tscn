@@ -2,8 +2,41 @@
 
 [ext_resource type="Script" uid="uid://cgbt1ak7pihvn" path="res://centipede_scene.gd" id="1_4j51b"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4j51b"]
+bg_color = Color(1, 1, 1, 0.24705882)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_son8g"]
+bg_color = Color(0.1764706, 0.14117648, 0.4117647, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nyo1w"]
+bg_color = Color(0.20784314, 0.3254902, 0.3882353, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vy4vr"]
+bg_color = Color(0.2784314, 0.20784314, 0.38431373, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3relh"]
+bg_color = Color(0.40784314, 0.29803923, 0.39215687, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yth6m"]
+bg_color = Color(0.39215687, 0.3647059, 0.23529412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wia6c"]
+bg_color = Color(0.1882353, 0.35686275, 0.32156864, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jj0sx"]
+bg_color = Color(0.22352941, 0.21176471, 0.24705882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jcewj"]
+bg_color = Color(0.25882354, 0.30588236, 0.16470589, 1)
+
 [node name="Main" type="Node2D" unique_id=1465816183]
 script = ExtResource("1_4j51b")
+
+[node name="Background" type="Polygon2D" parent="." unique_id=1171298708]
+color = Color(0.0627451, 0.050980393, 0.14509805, 1)
+polygon = PackedVector2Array(270, -137, 1225, -116, 1242, 768, -112, 778, -130, -81)
+
+[node name="PetContainer" type="Node2D" parent="." unique_id=1585421913]
 
 [node name="Ui" type="Control" parent="." unique_id=1182592668]
 layout_mode = 3
@@ -20,22 +53,24 @@ offset_top = -40.0
 offset_right = 300.0
 offset_bottom = 560.0
 grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4j51b")
 
 [node name="Generate" type="Button" parent="Ui/Panel" unique_id=505853462]
 custom_minimum_size = Vector2(20, 20)
 layout_mode = 0
 offset_left = 20.0
-offset_top = 20.0
+offset_top = 398.0
 offset_right = 100.0
-offset_bottom = 51.0
+offset_bottom = 429.0
 text = "Generate"
 
 [node name="TypeDropdown" type="OptionButton" parent="Ui/Panel" unique_id=1857326444]
 layout_mode = 0
 offset_left = 20.0
-offset_top = 60.0
-offset_right = 52.0
-offset_bottom = 80.0
+offset_top = 40.0
+offset_right = 225.0
+offset_bottom = 71.0
+selected = 2
 item_count = 3
 popup/item_0/text = "Spiky"
 popup/item_0/id = 0
@@ -47,39 +82,40 @@ popup/item_2/id = 2
 [node name="SizeSlider" type="HSlider" parent="Ui/Panel" unique_id=843178681]
 layout_mode = 0
 offset_left = 20.0
-offset_top = 100.0
+offset_top = 95.0
 offset_right = 226.0
-offset_bottom = 116.0
+offset_bottom = 111.0
 min_value = 0.5
 max_value = 2.5
-value = 0.5
+step = 0.1
+value = 1.5
 
 [node name="SegmentSlider" type="HSlider" parent="Ui/Panel" unique_id=2107357513]
 layout_mode = 0
 offset_left = 20.0
-offset_top = 140.0
+offset_top = 136.0
 offset_right = 226.0
-offset_bottom = 156.0
+offset_bottom = 152.0
 min_value = 3.0
 max_value = 25.0
-value = 3.0
+value = 15.0
 
 [node name="SpacingSlider" type="HSlider" parent="Ui/Panel" unique_id=2044429012]
 layout_mode = 0
 offset_left = 20.0
-offset_top = 180.0
+offset_top = 177.0
 offset_right = 226.0
-offset_bottom = 196.0
-min_value = 10.0
-max_value = 40.0
-value = 10.0
+offset_bottom = 193.0
+min_value = 5.0
+max_value = 20.0
+value = 8.0
 
 [node name="AntennaSlider" type="HSlider" parent="Ui/Panel" unique_id=211239830]
 layout_mode = 0
 offset_left = 20.0
-offset_top = 220.0
+offset_top = 218.0
 offset_right = 226.0
-offset_bottom = 236.0
+offset_bottom = 234.0
 min_value = 5.0
 max_value = 40.0
 value = 5.0
@@ -90,9 +126,9 @@ offset_left = 20.0
 offset_top = 260.0
 offset_right = 226.0
 offset_bottom = 276.0
-min_value = 5.0
+min_value = 3.0
 max_value = 30.0
-value = 5.0
+value = 7.0
 
 [node name="TailSlider" type="HSlider" parent="Ui/Panel" unique_id=176631872]
 layout_mode = 0
@@ -106,57 +142,136 @@ value = 10.0
 
 [node name="Color" type="Button" parent="Ui/Panel" unique_id=763960569]
 layout_mode = 0
-offset_top = 340.0
-offset_right = 28.0
-offset_bottom = 368.0
-
-[node name="Color2" type="Button" parent="Ui/Panel" unique_id=409700063]
-layout_mode = 0
 offset_left = 20.0
 offset_top = 340.0
 offset_right = 48.0
 offset_bottom = 368.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_son8g")
+
+[node name="Color2" type="Button" parent="Ui/Panel" unique_id=409700063]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 340.0
+offset_right = 110.0
+offset_bottom = 368.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_nyo1w")
 
 [node name="Color3" type="Button" parent="Ui/Panel" unique_id=405842338]
 layout_mode = 0
-offset_left = 40.0
+offset_left = 51.0
 offset_top = 340.0
-offset_right = 68.0
+offset_right = 79.0
 offset_bottom = 368.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_vy4vr")
 
 [node name="Color4" type="Button" parent="Ui/Panel" unique_id=1015465062]
 layout_mode = 0
-offset_left = 60.0
+offset_left = 113.0
 offset_top = 340.0
-offset_right = 88.0
+offset_right = 141.0
 offset_bottom = 368.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_3relh")
 
 [node name="Color5" type="Button" parent="Ui/Panel" unique_id=1202151920]
 layout_mode = 0
-offset_left = 80.0
+offset_left = 175.0
 offset_top = 340.0
-offset_right = 108.0
+offset_right = 203.0
 offset_bottom = 368.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_yth6m")
 
 [node name="Color6" type="Button" parent="Ui/Panel" unique_id=1159979669]
 layout_mode = 0
-offset_left = 120.0
+offset_left = 144.0
 offset_top = 340.0
-offset_right = 148.0
+offset_right = 172.0
 offset_bottom = 368.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_wia6c")
 
 [node name="Color7" type="Button" parent="Ui/Panel" unique_id=1309530706]
 layout_mode = 0
-offset_left = 140.0
+offset_left = 206.0
 offset_top = 340.0
-offset_right = 168.0
+offset_right = 234.0
 offset_bottom = 368.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jj0sx")
 
 [node name="Color8" type="Button" parent="Ui/Panel" unique_id=1087839332]
 layout_mode = 0
-offset_left = 160.0
+offset_left = 237.0
 offset_top = 340.0
-offset_right = 188.0
+offset_right = 265.0
 offset_bottom = 368.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jcewj")
 
-[node name="PetContainer" type="Node2D" parent="." unique_id=1585421913]
+[node name="TextEdit" type="Label" parent="Ui/Panel" unique_id=1324977305]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 13.0
+offset_right = 140.0
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Segment Shape"
+
+[node name="TextEdit2" type="Label" parent="Ui/Panel" unique_id=1972812785]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 71.0
+offset_right = 144.0
+offset_bottom = 94.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Segment Size"
+
+[node name="TextEdit3" type="Label" parent="Ui/Panel" unique_id=1067887364]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 111.0
+offset_right = 144.0
+offset_bottom = 134.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Segment Count"
+
+[node name="TextEdit4" type="Label" parent="Ui/Panel" unique_id=681351352]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 152.0
+offset_right = 144.0
+offset_bottom = 175.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Segment Distance"
+
+[node name="TextEdit5" type="Label" parent="Ui/Panel" unique_id=1372505850]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 193.0
+offset_right = 163.0
+offset_bottom = 216.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Antennae Length"
+
+[node name="TextEdit6" type="Label" parent="Ui/Panel" unique_id=248063686]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 236.0
+offset_right = 163.0
+offset_bottom = 259.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Leg Length"
+
+[node name="TextEdit7" type="Label" parent="Ui/Panel" unique_id=396537778]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 276.0
+offset_right = 163.0
+offset_bottom = 299.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Tail Length"
+
+[node name="TextEdit8" type="Label" parent="Ui/Panel" unique_id=655342812]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 316.0
+offset_right = 163.0
+offset_bottom = 339.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Primary Color"
