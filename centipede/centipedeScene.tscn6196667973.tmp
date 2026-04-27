@@ -29,30 +29,6 @@ bg_color = Color(0.22352941, 0.21176471, 0.24705882, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jcewj"]
 bg_color = Color(0.25882354, 0.30588236, 0.16470589, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3rf72"]
-bg_color = Color(0.3137255, 0.27058825, 0.5058824, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u0nyb"]
-bg_color = Color(0.5411765, 0.3372549, 0.42352942, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x7rod"]
-bg_color = Color(0.59607846, 0.50980395, 0.39215687, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3mmab"]
-bg_color = Color(0.27058825, 0.40784314, 0.3882353, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kjjdm"]
-bg_color = Color(0.38431373, 0.22352941, 0.06666667, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pmio3"]
-bg_color = Color(0.5176471, 0.42745098, 0.49411765, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v57v3"]
-bg_color = Color(0.38431373, 0.4, 0.14117648, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pvcc6"]
-bg_color = Color(0.105882354, 0.34117648, 0.38039216, 1)
-
 [node name="Main" type="Node2D" unique_id=1465816183]
 script = ExtResource("1_4j51b")
 
@@ -306,7 +282,7 @@ offset_left = 20.0
 offset_top = 397.0
 offset_right = 48.0
 offset_bottom = 425.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_3rf72")
+theme_override_styles/normal = SubResource("StyleBoxFlat_son8g")
 
 [node name="Color10" type="Button" parent="Ui/Panel" unique_id=1836834491]
 layout_mode = 0
@@ -314,7 +290,7 @@ offset_left = 82.0
 offset_top = 397.0
 offset_right = 110.0
 offset_bottom = 425.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_u0nyb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nyo1w")
 
 [node name="Color11" type="Button" parent="Ui/Panel" unique_id=1052797528]
 layout_mode = 0
@@ -322,7 +298,7 @@ offset_left = 51.0
 offset_top = 397.0
 offset_right = 79.0
 offset_bottom = 425.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_x7rod")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vy4vr")
 
 [node name="Color12" type="Button" parent="Ui/Panel" unique_id=1649768277]
 layout_mode = 0
@@ -330,7 +306,7 @@ offset_left = 113.0
 offset_top = 397.0
 offset_right = 141.0
 offset_bottom = 425.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_3mmab")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3relh")
 
 [node name="Color13" type="Button" parent="Ui/Panel" unique_id=1175106609]
 layout_mode = 0
@@ -338,7 +314,7 @@ offset_left = 175.0
 offset_top = 397.0
 offset_right = 203.0
 offset_bottom = 425.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_kjjdm")
+theme_override_styles/normal = SubResource("StyleBoxFlat_yth6m")
 
 [node name="Color14" type="Button" parent="Ui/Panel" unique_id=1370378492]
 layout_mode = 0
@@ -346,7 +322,7 @@ offset_left = 144.0
 offset_top = 397.0
 offset_right = 172.0
 offset_bottom = 425.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_pmio3")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wia6c")
 
 [node name="Color15" type="Button" parent="Ui/Panel" unique_id=550399166]
 layout_mode = 0
@@ -354,7 +330,7 @@ offset_left = 206.0
 offset_top = 397.0
 offset_right = 234.0
 offset_bottom = 425.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_v57v3")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jj0sx")
 
 [node name="Color16" type="Button" parent="Ui/Panel" unique_id=278861899]
 layout_mode = 0
@@ -362,7 +338,7 @@ offset_left = 237.0
 offset_top = 397.0
 offset_right = 265.0
 offset_bottom = 425.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_pvcc6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jcewj")
 
 [node name="TextEdit9" type="Label" parent="Ui/Panel" unique_id=1654477867]
 layout_mode = 0

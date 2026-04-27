@@ -4,6 +4,7 @@ extends Node2D
 @onready var ui = $Ui/Panel
 
 var selected_color = Color("2d2469")
+var selected_secondary_color = Color("504581")
 
 func _ready():
 
@@ -17,6 +18,15 @@ func _ready():
 	$Ui/Panel/Color7.pressed.connect(func(): selected_color = Color("39363f"))
 	$Ui/Panel/Color8.pressed.connect(func(): selected_color = Color("424e2a"))
 
+
+	$Ui/Panel/Color9.pressed.connect(func(): selected_secondary_color  = Color("504581"))
+	$Ui/Panel/Color10.pressed.connect(func(): selected_secondary_color  = Color("8a566c"))
+	$Ui/Panel/Color11.pressed.connect(func(): selected_secondary_color  = Color("988264"))
+	$Ui/Panel/Color12.pressed.connect(func(): selected_secondary_color  = Color("456863"))
+	$Ui/Panel/Color13.pressed.connect(func(): selected_secondary_color  = Color("623911"))
+	$Ui/Panel/Color14.pressed.connect(func(): selected_secondary_color  = Color("846d7e"))
+	$Ui/Panel/Color15.pressed.connect(func(): selected_secondary_color  = Color("626624"))
+	$Ui/Panel/Color16.pressed.connect(func(): selected_secondary_color  = Color("1b5761"))
 func _generate():
 
 	var panel = $Ui/Panel
@@ -30,7 +40,8 @@ func _generate():
 		"antenna": panel.get_node("AntennaSlider").value,
 		"legs": panel.get_node("LegSlider").value,
 		"tail": panel.get_node("TailSlider").value,
-		"color": selected_color
+		"color": selected_color,
+		"secondary_color": selected_secondary_color
 	}
 
 	var pet = preload("res://Centipede.tscn").instantiate()

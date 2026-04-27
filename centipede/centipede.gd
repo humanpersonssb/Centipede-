@@ -23,7 +23,7 @@ var spiky_textures = [
 	preload("res://assets/segment_spiky_trapezoid.png"),
 ]
 
-
+var gradiant_texture = preload("res://assets/gradient_inner.png")
 
 
 func setup(data):
@@ -45,6 +45,18 @@ func setup(data):
 		sprite.texture = chosen_texture
 		sprite.scale = Vector2.ONE * data.size * 0.05
 		sprite.modulate = data.color
+		
+		#gradiant thing
+		sprite.clip_children = CanvasItem.CLIP_CHILDREN_AND_DRAW
+		var overlay = Sprite2D.new()
+		overlay.texture = gradiant_texture
+		overlay.scale = Vector2.ONE
+		overlay.modulate = data.secondary_color
+		sprite.add_child(overlay)
+		
+		
+		
+		
 		add_child(sprite)
 
 		segments.append({
@@ -52,6 +64,7 @@ func setup(data):
 			"index": i,
 			"size": data.size,
 			"color": data.color,
+			"secondary_color": data.secondary_color,
 			"type": data.type,
 			"antenna": data.antenna,
 			"legs": data.legs,
@@ -118,6 +131,7 @@ func _draw():
 		var is_head = i == 0
 		var is_tail = i == segment_count - 1
 		var color = seg.color
+		var secondary_color = seg.secondary_color
 		var size = seg.size
 		var leg_len = seg.legs
 		var antenna_len = seg.antenna
@@ -135,13 +149,13 @@ func _draw():
 		draw_line(
 			left_root,
 			left_root - right * leg_len * size * 2.0 + forward * wiggle,
-			color, 2.0
+			secondary_color, 2.0
 		)
 		var right_root = p + right * radius * 0.5
 		draw_line(
 			right_root,
 			right_root + right * leg_len * size * 2.0 - forward * wiggle,
-			color, 2.0
+			secondary_color, 2.0
 		)
 
 		if is_head:
