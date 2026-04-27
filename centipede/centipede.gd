@@ -23,8 +23,9 @@ var spiky_textures = [
 	preload("res://assets/segment_spiky_trapezoid.png"),
 ]
 
-var gradiant_texture = preload("res://assets/gradient_inner.png")
-var leg_texture = preload("res://assets/leg_lowerarm.png")
+var gradiant_texture = preload("res://assets/gradient_outer.png")
+var leg_texture = preload("res://assets/leg_bent.png")
+var leg_texture_flipped = preload("res://assets/leg_bent_flipped.png")
 
 func setup(data):
 	segment_count = data.segments
@@ -54,6 +55,7 @@ func setup(data):
 		overlay.modulate = data.secondary_color
 		overlay.material = CanvasItemMaterial.new()
 		overlay.material.blend_mode = CanvasItemMaterial.BLEND_MODE_ADD
+		overlay.material.blend_mode = CanvasItemMaterial.LIGHT_MODE_UNSHADED
 		sprite.add_child(overlay)
 		
 		add_child(sprite)
@@ -62,7 +64,7 @@ func setup(data):
 		
 		#legs
 		var left_leg = Sprite2D.new()
-		left_leg.texture = leg_texture
+		left_leg.texture = leg_texture_flipped
 		left_leg.scale = Vector2.ONE *data.size*0.05*data.legs
 		left_leg.modulate = data.secondary_color
 		left_leg.offset = Vector2(0, -left_leg.texture.get_height() / 2.0)
