@@ -17,8 +17,11 @@ config/icon="res://icon.svg"
 
 [display]
 
+window/size/resizable=false
+window/size/transparent=true
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+window/per_pixel_transparency/allowed=true
 
 [physics]
 
@@ -27,3 +30,4 @@ window/stretch/aspect="expand"
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+viewport/transparent_background=true

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://buuh28eie8ud0"]
+
+[ext_resource type="Texture2D" uid="uid://dhmiwb50753l" path="res://assets/segment_smooth_bumps.png" id="1_kx5my"]
+[ext_resource type="Texture2D" path="res://assets/BlueSlime.png" id="2_jdjrj"]
+
+[node name="Clippingtestscene" type="Node2D" unique_id=171056400]
+
+[node name="SegmentSmoothBumps" type="Sprite2D" parent="." unique_id=2115779703]
+self_modulate = Color(0.92156863, 0.39607844, 1, 1)
+clip_children = 2
+position = Vector2(469, 354)
+texture = ExtResource("1_kx5my")
+
+[node name="BlueSlime" type="Sprite2D" parent="SegmentSmoothBumps" unique_id=258182570]
+position = Vector2(220, 88)
+texture = ExtResource("2_jdjrj")

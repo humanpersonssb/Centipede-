@@ -23,7 +23,7 @@ var spiky_textures = [
 	preload("res://assets/segment_spiky_trapezoid.png"),
 ]
 
-var gradiant_texture = preload("res://assets/gradient_outer.png")
+var gradiant_texture = preload("res://assets/gradient_inner.png")
 var leg_texture = preload("res://assets/leg_bent.png")
 var antennae_texture = preload("res://assets/leg_lowerarm.png")
 var leg_texture_flipped = preload("res://assets/leg_bent_flipped.png")
@@ -86,7 +86,7 @@ func setup(data):
 		var sprite = Sprite2D.new()
 		sprite.texture = chosen_texture
 		sprite.scale = Vector2.ONE * data.size * 0.05
-		sprite.modulate = data.color
+		sprite.self_modulate = data.color
 		
 		#gradiant thing
 		sprite.clip_children = CanvasItem.CLIP_CHILDREN_AND_DRAW
@@ -94,9 +94,6 @@ func setup(data):
 		overlay.texture = gradiant_texture
 		overlay.scale = Vector2.ONE
 		overlay.modulate = data.secondary_color
-		overlay.material = CanvasItemMaterial.new()
-		overlay.material.blend_mode = CanvasItemMaterial.BLEND_MODE_ADD
-		overlay.material.blend_mode = CanvasItemMaterial.LIGHT_MODE_UNSHADED
 		sprite.add_child(overlay)
 		
 		add_child(sprite)

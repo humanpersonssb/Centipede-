@@ -57,7 +57,7 @@ bg_color = Color(0.105882354, 0.34117648, 0.38039216, 1)
 script = ExtResource("1_4j51b")
 
 [node name="Background" type="Polygon2D" parent="." unique_id=1171298708]
-color = Color(0.0627451, 0.050980393, 0.14509805, 1)
+color = Color(0.0627451, 0.050980393, 0.14509805, 0)
 polygon = PackedVector2Array(270, -137, 1225, -116, 1242, 768, -112, 778, -130, -81)
 
 [node name="PetContainer" type="Node2D" parent="." unique_id=1585421913]
