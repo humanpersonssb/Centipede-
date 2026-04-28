@@ -25,6 +25,7 @@ var spiky_textures = [
 
 var gradiant_texture = preload("res://assets/gradient_outer.png")
 var leg_texture = preload("res://assets/leg_bent.png")
+var antennae_texture = preload("res://assets/leg_lowerarm.png")
 var leg_texture_flipped = preload("res://assets/leg_bent_flipped.png")
 
 func setup(data):
@@ -42,23 +43,7 @@ func setup(data):
 	var chosen_texture = pool[randi() % pool.size()]
 
 	for i in range(segment_count):
-		var sprite = Sprite2D.new()
-		sprite.texture = chosen_texture
-		sprite.scale = Vector2.ONE * data.size * 0.05
-		sprite.modulate = data.color
 		
-		#gradiant thing
-		sprite.clip_children = CanvasItem.CLIP_CHILDREN_AND_DRAW
-		var overlay = Sprite2D.new()
-		overlay.texture = gradiant_texture
-		overlay.scale = Vector2.ONE
-		overlay.modulate = data.secondary_color
-		overlay.material = CanvasItemMaterial.new()
-		overlay.material.blend_mode = CanvasItemMaterial.BLEND_MODE_ADD
-		overlay.material.blend_mode = CanvasItemMaterial.LIGHT_MODE_UNSHADED
-		sprite.add_child(overlay)
-		
-		add_child(sprite)
 		
 		
 		
@@ -78,6 +63,43 @@ func setup(data):
 		add_child(right_leg)
 		
 		
+		#antaneea
+		var antennaeL = null
+		var antennaeR = null
+		if(i == 0):
+			antennaeL = Sprite2D.new()
+			antennaeL.texture = antennae_texture
+			antennaeL.scale = Vector2.ONE *data.size*0.05
+			antennaeL.scale.y = data.antenna*0.05
+			antennaeL.modulate = data.secondary_color
+			antennaeL.offset = Vector2(0, -antennaeL.texture.get_height() / 2.0)
+			add_child(antennaeL)
+			
+			antennaeR = Sprite2D.new()
+			antennaeR.texture = antennae_texture
+			antennaeR.scale = Vector2.ONE *data.size*0.05
+			antennaeL.scale.y = data.antenna*0.05
+			antennaeR.modulate = data.secondary_color
+			antennaeR.offset = Vector2(0, -antennaeR.texture.get_height() / 2.0)
+			add_child(antennaeR)
+		
+		var sprite = Sprite2D.new()
+		sprite.texture = chosen_texture
+		sprite.scale = Vector2.ONE * data.size * 0.05
+		sprite.modulate = data.color
+		
+		#gradiant thing
+		sprite.clip_children = CanvasItem.CLIP_CHILDREN_AND_DRAW
+		var overlay = Sprite2D.new()
+		overlay.texture = gradiant_texture
+		overlay.scale = Vector2.ONE
+		overlay.modulate = data.secondary_color
+		overlay.material = CanvasItemMaterial.new()
+		overlay.material.blend_mode = CanvasItemMaterial.BLEND_MODE_ADD
+		overlay.material.blend_mode = CanvasItemMaterial.LIGHT_MODE_UNSHADED
+		sprite.add_child(overlay)
+		
+		add_child(sprite)
 		
 
 		segments.append({
@@ -92,7 +114,9 @@ func setup(data):
 			"tail": data.tail,
 			"node": sprite,
 			"left_leg": left_leg,
-			"right_leg": right_leg
+			"right_leg": right_leg,
+			"antennaeL": antennaeL,
+			"antennaeR": antennaeR
 		})
 
 func _process(delta):
@@ -161,6 +185,12 @@ func update_sprite_transforms():
 		seg.right_leg.global_position = seg.pos + right * radius * 0.5
 		seg.right_leg.rotation = seg.node.rotation + PI / 2.0 + wiggle
 		
+		
+		#antnea
+		if (seg.index==0):
+			seg.antennaeL.rotation = seg.node.rotation +PI/6 + wiggle/3
+			seg.antennaeR.rotation = seg.node.rotation  -PI/6- wiggle/3 
+		
 
 func _draw():
 	var t = Time.get_ticks_msec() / 200.0
@@ -197,34 +227,34 @@ func _draw():
 		#	secondary_color, 2.0
 		#)
 
-		if is_head:
-			draw_line(
-				p + Vector2(-radius * 0.3, -radius * 0.6),
-				p + Vector2(-antenna_len * 0.5 * size, -antenna_len * size + wiggle),
-				color,
-				2.0
-			)
-			draw_line(
-				p + Vector2(radius * 0.3, -radius * 0.6),
-				p + Vector2(antenna_len * 0.5 * size, -antenna_len * size - wiggle),
-				color,
-				2.0
-			)
-			draw_circle(
-				p + Vector2(-radius * 0.25, -radius * 0.1),
-				max(1.5, radius * 0.12),
-				Color.BLACK
-			)
-			draw_circle(
-				p + Vector2(radius * 0.25, -radius * 0.1),
-				max(1.5, radius * 0.12),
-				Color.BLACK
-			)
-
-		if is_tail:
-			draw_line(
-				p + Vector2(0, radius * 0.7),
-				p + Vector2(0, tail_len * size),
-				color,
-				3.0
-			)
+		#if is_head:
+			#draw_line(
+				#p + Vector2(-radius * 0.3, -radius * 0.6),
+				#p + Vector2(-antenna_len * 0.5 * size, -antenna_len * size + wiggle),
+				#color,
+				#2.0
+			#)
+			#draw_line(
+				#p + Vector2(radius * 0.3, -radius * 0.6),
+				#p + Vector2(antenna_len * 0.5 * size, -antenna_len * size - wiggle),
+				#color,
+				#2.0
+			#)
+			#draw_circle(
+				#p + Vector2(-radius * 0.25, -radius * 0.1),
+				#max(1.5, radius * 0.12),
+				#Color.BLACK
+			#)
+			#draw_circle(
+				#p + Vector2(radius * 0.25, -radius * 0.1),
+				#max(1.5, radius * 0.12),
+				#Color.BLACK
+			#)
+#
+		#if is_tail:
+			#draw_line(
+				#p + Vector2(0, radius * 0.7),
+				#p + Vector2(0, tail_len * size),
+				#color,
+				#3.0
+			#)
