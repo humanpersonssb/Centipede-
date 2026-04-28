@@ -49,15 +49,18 @@ func setup(data):
 		
 		#legs
 		var left_leg = Sprite2D.new()
-		left_leg.texture = leg_texture_flipped
+		left_leg.texture = leg_texture
 		left_leg.scale = Vector2.ONE *data.size*0.05*data.legs
+		left_leg.scale.x = -left_leg.scale.x
 		left_leg.modulate = data.secondary_color
 		left_leg.offset = Vector2(0, -left_leg.texture.get_height() / 2.0)
 		add_child(left_leg)
 		
 		var right_leg = Sprite2D.new()
 		right_leg.texture = leg_texture
+		
 		right_leg.scale = Vector2.ONE *data.size*0.05*data.legs
+		
 		right_leg.modulate = data.secondary_color
 		right_leg.offset = Vector2(0, -left_leg.texture.get_height() / 2.0)
 		add_child(right_leg)

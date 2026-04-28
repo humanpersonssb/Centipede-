@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cgbt1ak7pihvn" path="res://centipede_scene.gd" id="1_4j51b"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4j51b"]
-bg_color = Color(1, 1, 1, 0.24705882)
+bg_color = Color(1, 1, 1, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_son8g"]
 bg_color = Color(0.1764706, 0.14117648, 0.4117647, 1)
