@@ -62,6 +62,12 @@ polygon = PackedVector2Array(270, -137, 1225, -116, 1242, 768, -112, 778, -130, 
 
 [node name="PetContainer" type="Node2D" parent="." unique_id=1585421913]
 
+[node name="Blood" type="Node2D" parent="PetContainer" unique_id=861778966]
+
+[node name="Dead" type="Node2D" parent="PetContainer" unique_id=690034649]
+
+[node name="Alive" type="Node2D" parent="PetContainer" unique_id=1191043649]
+
 [node name="Ui" type="Control" parent="." unique_id=1182592668]
 layout_mode = 3
 anchors_preset = 0
@@ -374,3 +380,6 @@ offset_right = 163.0
 offset_bottom = 396.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Secondary Color"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1584131838]
+position = Vector2(578, 324)

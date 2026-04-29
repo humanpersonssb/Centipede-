@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://c5u3hvr01v7vs"]
+
+[ext_resource type="Script" uid="uid://cxt815qp7a1q3" path="res://segment.gd" id="1_bkcha"]
+[ext_resource type="Texture2D" uid="uid://dhmiwb50753l" path="res://assets/segment_smooth_bumps.png" id="2_3mqu2"]
+[ext_resource type="Texture2D" uid="uid://cp8rpcsni08qv" path="res://assets/gradient_inner.png" id="3_dgbe3"]
+[ext_resource type="Texture2D" uid="uid://k8whpdg1r8do" path="res://assets/leg_bent.png" id="4_dm62h"]
+[ext_resource type="Texture2D" uid="uid://0sdf8fo55nx2" path="res://assets/leg_upperarm.png" id="5_0c8ax"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bkcha"]
+radius = 161.02795
+
+[node name="Segment" type="Node2D" unique_id=1991091257]
+script = ExtResource("1_bkcha")
+
+[node name="Body" type="Sprite2D" parent="." unique_id=1824425741]
+texture = ExtResource("2_3mqu2")
+
+[node name="Overlay" type="Sprite2D" parent="Body" unique_id=218689406]
+texture = ExtResource("3_dgbe3")
+
+[node name="LeftLeg" type="Sprite2D" parent="." unique_id=305125549]
+texture = ExtResource("4_dm62h")
+
+[node name="RightLeg" type="Sprite2D" parent="." unique_id=27200364]
+texture = ExtResource("4_dm62h")
+
+[node name="AntennaeL" type="Sprite2D" parent="." unique_id=164311830]
+texture = ExtResource("5_0c8ax")
+
+[node name="AntennaeR" type="Sprite2D" parent="." unique_id=499022459]
+texture = ExtResource("5_0c8ax")
+
+[node name="ClickArea" type="Area2D" parent="." unique_id=1804601787]
+
+[node name="Shape" type="CollisionShape2D" parent="ClickArea" unique_id=155730180]
+shape = SubResource("CircleShape2D_bkcha")
