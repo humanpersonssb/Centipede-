@@ -90,7 +90,7 @@ func on_clicked():
 	if exploded:
 		return
 	explode()
-	await get_tree().create_timer(0.1).timeout
+	await get_tree().create_timer(0.075).timeout
 	if prev_segment:
 		prev_segment.propagate(-1)
 	if next_segment:
@@ -103,7 +103,7 @@ func propagate(direction: int):
 		
 		
 		
-	await get_tree().create_timer(0.05).timeout
+	await get_tree().create_timer(0.075).timeout
 	
 	if direction == -1 and prev_segment:
 		prev_segment.propagate(-1)
