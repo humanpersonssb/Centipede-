@@ -47,6 +47,7 @@ func _generate():
 	var pet = preload("res://Centipede.tscn").instantiate()
 	pet.position = get_viewport_rect().size / 2
 	alive.add_child(pet)
+	$AudioStreamPlayer.play()
 	pet.setup(settings)
 	
 	
