@@ -7,9 +7,24 @@ extends Node2D
 @onready var blood = $PetContainer/Blood
 
 
-
+var Bloods = [
+	Color("FF0097"),
+	Color("000000"),
+	Color("eaa015"),
+	Color("BF00FF")
+]
 var selected_color = Color("8b4f21")
 var selected_secondary_color = Color("cd502a")
+var Color1 = [
+	Color("8b4f21"),
+	Color("cd502a"),
+	Color("eaa015"),
+	Color("afc652"),
+	Color("63bb93"),
+	Color("4798af"),
+	Color("5552b2"),
+	Color("e97fa1")
+]
 
 func _ready():
 	#$Ui/Panel/Generate.pressed.connect(_generate)
@@ -59,7 +74,8 @@ func _generate():
 		"legs": panel.get_node("LegSlider").value,
 		"tail": panel.get_node("TailSlider").value,
 		"color": selected_color,
-		"secondary_color": selected_secondary_color
+		"secondary_color": selected_secondary_color,
+		"blood": Bloods[randi_range(0,3)]
 	}
 	var pet = preload("res://Centipede.tscn").instantiate()
 	pet.position = get_viewport_rect().size / 2
@@ -73,14 +89,15 @@ func _Rgenerate():
 	var dropdown = $Ui/Panel/TypeDropdown
 	var settings = {
 		"type": dropdown.get_item_text(dropdown.selected).to_lower(),
-		"size": panel.get_node("SizeSlider").value,
-		"segments": int(panel.get_node("SegmentSlider").value),
-		"spacing": panel.get_node("SpacingSlider").value,
-		"antenna": panel.get_node("AntennaSlider").value,
-		"legs": panel.get_node("LegSlider").value,
-		"tail": panel.get_node("TailSlider").value,
-		"color": selected_color,
-		"secondary_color": selected_secondary_color
+		"size": randi_range(0.5,2.5),
+		"segments": randi_range(3,40),
+		"spacing": randi_range(5,20),
+		"antenna": randi_range(1,7),
+		"legs": randi_range(0.5,2),
+		"tail": randi_range(3,100),
+		"color": Color1[randi_range(0,7)],
+		"secondary_color": Color1[randi_range(0,7)],
+		"blood": Bloods[randi_range(0,3)]
 	}
 	var pet = preload("res://Centipede.tscn").instantiate()
 	pet.position = get_viewport_rect().size / 2
