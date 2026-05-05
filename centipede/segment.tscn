@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://0sdf8fo55nx2" path="res://assets/leg_upperarm.png" id="5_0c8ax"]
 [ext_resource type="AudioStream" uid="uid://vlo2qcjw7pyo" path="res://Sound/squish squish.wav" id="6_3mqu2"]
 [ext_resource type="AudioStream" uid="uid://3a5cvynrb5um" path="res://Sound/squish scream.wav" id="7_dgbe3"]
+[ext_resource type="AudioStream" uid="uid://chh2afq5mw814" path="res://Sound/wall_bonk.wav" id="7_f5bgb"]
 [ext_resource type="AudioStream" uid="uid://15bffl7kohw8" path="res://Sound/gasp2.wav" id="8_0c8ax"]
 [ext_resource type="AudioStream" uid="uid://c3og3tb0vmjh5" path="res://Sound/crawl_not_gross.wav" id="8_dm62h"]
 [ext_resource type="AudioStream" uid="uid://c5r1p24l0af7f" path="res://Sound/gasp3.wav" id="9_ppvto"]
@@ -45,6 +46,11 @@ shape = SubResource("CircleShape2D_bkcha")
 [node name="SquishSound" type="AudioStreamPlayer" parent="." unique_id=562776655]
 unique_name_in_owner = true
 stream = ExtResource("6_3mqu2")
+max_polyphony = 1000
+
+[node name="WallSound" type="AudioStreamPlayer" parent="." unique_id=1709485945]
+unique_name_in_owner = true
+stream = ExtResource("7_f5bgb")
 max_polyphony = 1000
 
 [node name="GaspSound" type="AudioStreamPlayer" parent="." unique_id=401843697]

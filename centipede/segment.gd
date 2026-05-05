@@ -186,8 +186,13 @@ func explode():
 
 func _process(delta):
 	
-	
-	
+	if(!exploded)&&(is_head):
+		if global_position.x < 1 or global_position.x > get_viewport_rect().size.x-1:
+			print("")
+			$WallSound.play()
+		if global_position.y < 1 or global_position.y > get_viewport_rect().size.y-1:
+			print("")
+			$WallSound.play()
 	
 	for part in flying_parts:
 		if not is_instance_valid(part.node):

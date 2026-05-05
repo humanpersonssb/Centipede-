@@ -61,6 +61,7 @@ func _process(delta):
 	update_segments()
 
 func move_head(delta):
+	
 	turn_timer -= delta
 	if turn_timer <= 0:
 		turn_timer = randf_range(0.5, 2.0)
