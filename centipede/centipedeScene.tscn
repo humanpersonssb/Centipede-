@@ -30,6 +30,9 @@ bg_color = Color(0.33333334, 0.32156864, 0.69803923, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jcewj"]
 bg_color = Color(0.9137255, 0.49803922, 0.6313726, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_son8g"]
+font_color = Color(0.93333334, 0.90588236, 0.87058824, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3rf72"]
 bg_color = Color(0.54509807, 0.30980393, 0.12941177, 1)
 
@@ -80,20 +83,20 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 39.0
-offset_top = -11.0
-offset_right = 339.0
-offset_bottom = 492.0
+offset_left = 23.0
+offset_top = -25.0
+offset_right = 323.0
+offset_bottom = 589.0
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_4j51b")
 
 [node name="Generate" type="Button" parent="Ui/Panel" unique_id=505853462]
 custom_minimum_size = Vector2(20, 20)
 layout_mode = 0
-offset_left = 20.0
-offset_top = 449.0
-offset_right = 100.0
-offset_bottom = 480.0
+offset_left = 14.0
+offset_top = 563.0
+offset_right = 94.0
+offset_bottom = 595.0
 text = "Generate"
 
 [node name="TypeDropdown" type="OptionButton" parent="Ui/Panel" unique_id=1857326444]
@@ -114,9 +117,9 @@ popup/item_2/id = 2
 [node name="SizeSlider" type="HSlider" parent="Ui/Panel" unique_id=843178681]
 layout_mode = 0
 offset_left = 20.0
-offset_top = 95.0
+offset_top = 112.0
 offset_right = 226.0
-offset_bottom = 111.0
+offset_bottom = 128.0
 min_value = 0.5
 max_value = 2.5
 step = 0.1
@@ -125,9 +128,9 @@ value = 1.5
 [node name="SegmentSlider" type="HSlider" parent="Ui/Panel" unique_id=2107357513]
 layout_mode = 0
 offset_left = 20.0
-offset_top = 136.0
+offset_top = 161.0
 offset_right = 226.0
-offset_bottom = 152.0
+offset_bottom = 177.0
 min_value = 3.0
 max_value = 25.0
 value = 15.0
@@ -135,9 +138,9 @@ value = 15.0
 [node name="SpacingSlider" type="HSlider" parent="Ui/Panel" unique_id=2044429012]
 layout_mode = 0
 offset_left = 20.0
-offset_top = 177.0
+offset_top = 212.0
 offset_right = 226.0
-offset_bottom = 193.0
+offset_bottom = 228.0
 min_value = 3.0
 max_value = 20.0
 value = 10.0
@@ -145,9 +148,9 @@ value = 10.0
 [node name="AntennaSlider" type="HSlider" parent="Ui/Panel" unique_id=211239830]
 layout_mode = 0
 offset_left = 20.0
-offset_top = 218.0
+offset_top = 266.0
 offset_right = 226.0
-offset_bottom = 234.0
+offset_bottom = 282.0
 min_value = 1.0
 max_value = 7.0
 step = 0.1
@@ -156,9 +159,9 @@ value = 3.0
 [node name="LegSlider" type="HSlider" parent="Ui/Panel" unique_id=76902330]
 layout_mode = 0
 offset_left = 20.0
-offset_top = 260.0
+offset_top = 320.0
 offset_right = 226.0
-offset_bottom = 276.0
+offset_bottom = 336.0
 min_value = 0.5
 max_value = 2.0
 step = 0.1
@@ -167,9 +170,9 @@ value = 1.0
 [node name="TailSlider" type="HSlider" parent="Ui/Panel" unique_id=176631872]
 layout_mode = 0
 offset_left = 20.0
-offset_top = 300.0
+offset_top = 371.0
 offset_right = 226.0
-offset_bottom = 316.0
+offset_bottom = 387.0
 min_value = 10.0
 max_value = 50.0
 value = 10.0
@@ -177,65 +180,65 @@ value = 10.0
 [node name="Color" type="Button" parent="Ui/Panel" unique_id=763960569]
 layout_mode = 0
 offset_left = 20.0
-offset_top = 340.0
+offset_top = 426.0
 offset_right = 48.0
-offset_bottom = 368.0
+offset_bottom = 454.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_son8g")
 
 [node name="Color2" type="Button" parent="Ui/Panel" unique_id=409700063]
 layout_mode = 0
 offset_left = 51.0
-offset_top = 340.0
+offset_top = 426.0
 offset_right = 79.0
-offset_bottom = 368.0
+offset_bottom = 454.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_nyo1w")
 
 [node name="Color3" type="Button" parent="Ui/Panel" unique_id=405842338]
 layout_mode = 0
 offset_left = 82.0
-offset_top = 340.0
+offset_top = 426.0
 offset_right = 110.0
-offset_bottom = 368.0
+offset_bottom = 454.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_vy4vr")
 
 [node name="Color4" type="Button" parent="Ui/Panel" unique_id=1015465062]
 layout_mode = 0
 offset_left = 113.0
-offset_top = 340.0
+offset_top = 426.0
 offset_right = 141.0
-offset_bottom = 368.0
+offset_bottom = 454.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_3relh")
 
 [node name="Color5" type="Button" parent="Ui/Panel" unique_id=1202151920]
 layout_mode = 0
 offset_left = 144.0
-offset_top = 340.0
+offset_top = 426.0
 offset_right = 172.0
-offset_bottom = 368.0
+offset_bottom = 454.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_yth6m")
 
 [node name="Color6" type="Button" parent="Ui/Panel" unique_id=1159979669]
 layout_mode = 0
 offset_left = 175.0
-offset_top = 340.0
+offset_top = 426.0
 offset_right = 203.0
-offset_bottom = 368.0
+offset_bottom = 454.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_wia6c")
 
 [node name="Color7" type="Button" parent="Ui/Panel" unique_id=1309530706]
 layout_mode = 0
 offset_left = 206.0
-offset_top = 340.0
+offset_top = 426.0
 offset_right = 234.0
-offset_bottom = 368.0
+offset_bottom = 454.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_jj0sx")
 
 [node name="Color8" type="Button" parent="Ui/Panel" unique_id=1087839332]
 layout_mode = 0
 offset_left = 237.0
-offset_top = 340.0
+offset_top = 426.0
 offset_right = 265.0
-offset_bottom = 368.0
+offset_bottom = 454.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_jcewj")
 
 [node name="TextEdit" type="Label" parent="Ui/Panel" unique_id=1324977305]
@@ -247,152 +250,160 @@ offset_bottom = 36.0
 pivot_offset = Vector2(215, 368)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Segment Shape"
+label_settings = SubResource("LabelSettings_son8g")
 
 [node name="TextEdit2" type="Label" parent="Ui/Panel" unique_id=1972812785]
 layout_mode = 0
 offset_left = 24.0
-offset_top = 71.0
+offset_top = 88.0
 offset_right = 144.0
-offset_bottom = 94.0
+offset_bottom = 112.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Segment Size"
+label_settings = SubResource("LabelSettings_son8g")
 
 [node name="TextEdit3" type="Label" parent="Ui/Panel" unique_id=1067887364]
 layout_mode = 0
 offset_left = 24.0
-offset_top = 111.0
+offset_top = 136.0
 offset_right = 144.0
-offset_bottom = 134.0
+offset_bottom = 160.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Segment Count"
+label_settings = SubResource("LabelSettings_son8g")
 
 [node name="TextEdit4" type="Label" parent="Ui/Panel" unique_id=681351352]
 layout_mode = 0
 offset_left = 24.0
-offset_top = 152.0
-offset_right = 144.0
-offset_bottom = 175.0
+offset_top = 187.0
+offset_right = 146.0
+offset_bottom = 211.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Segment Distance"
+label_settings = SubResource("LabelSettings_son8g")
 
 [node name="TextEdit5" type="Label" parent="Ui/Panel" unique_id=1372505850]
 layout_mode = 0
 offset_left = 24.0
-offset_top = 193.0
+offset_top = 241.0
 offset_right = 163.0
-offset_bottom = 216.0
+offset_bottom = 265.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Antennae Length"
+label_settings = SubResource("LabelSettings_son8g")
 
 [node name="TextEdit6" type="Label" parent="Ui/Panel" unique_id=248063686]
 layout_mode = 0
 offset_left = 24.0
-offset_top = 236.0
+offset_top = 296.0
 offset_right = 163.0
-offset_bottom = 259.0
+offset_bottom = 320.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Leg Length"
+label_settings = SubResource("LabelSettings_son8g")
 
 [node name="TextEdit7" type="Label" parent="Ui/Panel" unique_id=396537778]
 layout_mode = 0
 offset_left = 24.0
-offset_top = 276.0
+offset_top = 347.0
 offset_right = 163.0
-offset_bottom = 299.0
+offset_bottom = 371.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Tail Length"
+label_settings = SubResource("LabelSettings_son8g")
 
 [node name="TextEdit8" type="Label" parent="Ui/Panel" unique_id=655342812]
 layout_mode = 0
 offset_left = 24.0
-offset_top = 316.0
+offset_top = 402.0
 offset_right = 163.0
-offset_bottom = 339.0
+offset_bottom = 426.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Primary Color"
+label_settings = SubResource("LabelSettings_son8g")
 
 [node name="Color9" type="Button" parent="Ui/Panel" unique_id=2068533225]
 layout_mode = 0
 offset_left = 20.0
-offset_top = 397.0
+offset_top = 494.0
 offset_right = 48.0
-offset_bottom = 425.0
+offset_bottom = 522.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_3rf72")
 
 [node name="Color10" type="Button" parent="Ui/Panel" unique_id=1836834491]
 layout_mode = 0
 offset_left = 51.0
-offset_top = 397.0
+offset_top = 494.0
 offset_right = 79.0
-offset_bottom = 425.0
+offset_bottom = 522.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_u0nyb")
 
 [node name="Color11" type="Button" parent="Ui/Panel" unique_id=1052797528]
 layout_mode = 0
 offset_left = 82.0
-offset_top = 397.0
+offset_top = 494.0
 offset_right = 110.0
-offset_bottom = 425.0
+offset_bottom = 522.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_x7rod")
 
 [node name="Color12" type="Button" parent="Ui/Panel" unique_id=1649768277]
 layout_mode = 0
 offset_left = 113.0
-offset_top = 397.0
+offset_top = 494.0
 offset_right = 141.0
-offset_bottom = 425.0
+offset_bottom = 522.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_3mmab")
 
 [node name="Color13" type="Button" parent="Ui/Panel" unique_id=1175106609]
 layout_mode = 0
 offset_left = 144.0
-offset_top = 397.0
+offset_top = 494.0
 offset_right = 172.0
-offset_bottom = 425.0
+offset_bottom = 522.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_kjjdm")
 
 [node name="Color14" type="Button" parent="Ui/Panel" unique_id=1370378492]
 layout_mode = 0
 offset_left = 175.0
-offset_top = 397.0
+offset_top = 494.0
 offset_right = 203.0
-offset_bottom = 425.0
+offset_bottom = 522.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_pmio3")
 
 [node name="Color15" type="Button" parent="Ui/Panel" unique_id=550399166]
 layout_mode = 0
 offset_left = 206.0
-offset_top = 397.0
+offset_top = 494.0
 offset_right = 234.0
-offset_bottom = 425.0
+offset_bottom = 522.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_v57v3")
 
 [node name="Color16" type="Button" parent="Ui/Panel" unique_id=278861899]
 layout_mode = 0
 offset_left = 237.0
-offset_top = 397.0
+offset_top = 494.0
 offset_right = 265.0
-offset_bottom = 425.0
+offset_bottom = 522.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_pvcc6")
 
 [node name="TextEdit9" type="Label" parent="Ui/Panel" unique_id=1654477867]
 layout_mode = 0
 offset_left = 24.0
-offset_top = 373.0
+offset_top = 470.0
 offset_right = 163.0
-offset_bottom = 396.0
+offset_bottom = 494.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Secondary Color"
+label_settings = SubResource("LabelSettings_son8g")
 
 [node name="RGenerate" type="Button" parent="Ui/Panel" unique_id=1759977466]
 custom_minimum_size = Vector2(20, 20)
 layout_mode = 0
-offset_left = 158.0
-offset_top = 438.0
-offset_right = 271.0
-offset_bottom = 492.0
-text = "1 Random 
-Centipede Plz"
+offset_left = 97.0
+offset_top = 563.0
+offset_right = 285.0
+offset_bottom = 595.0
+text = "1 Random Centipede Plz"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1584131838]
 position = Vector2(578, 324)
