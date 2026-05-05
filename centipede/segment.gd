@@ -12,7 +12,12 @@ var main_scene: Node = null
 @onready var shape = $ClickArea/Shape
 
 
-
+var Bloods = [
+	Color("FF0097"),
+	Color("000000"),
+	Color("eaa015"),
+	Color("BF00FF")
+]
 var blood_textures = [
 	preload("res://assets/splatter_1.png"),
 	preload("res://assets/splatter_2.png"),
@@ -26,7 +31,7 @@ var is_head: bool = false
 var prev_segment = null
 var next_segment = null
 var exploded: bool = false
-
+var bloodcolor = null
 var flying_parts: Array = []
 
 var dead_parts_node: Node = null
@@ -42,7 +47,7 @@ func setup(data, seg_index, texture, dead_parts, blood):
 	index = seg_index
 	seg_size = data.size
 	is_head = seg_index == 0
-
+	bloodcolor = data.blood
 	body.texture = texture
 	body.scale = Vector2.ONE * data.size * 0.05
 	body.self_modulate = data.color
@@ -198,7 +203,7 @@ func _process(delta):
 			splatter.texture = blood_textures[randi() % blood_textures.size()]
 			splatter.rotation = randf_range(0, TAU)
 			splatter.scale = Vector2.ONE * seg_size *part.velocity.length() *0.0005 
-			splatter.modulate =  Color("#302320")
+			splatter.modulate =  bloodcolor
 			blood_node.add_child(splatter)
 			splatter.global_position = part.node.global_position
 
