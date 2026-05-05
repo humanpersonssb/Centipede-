@@ -82,7 +82,7 @@ func _generate():
 		"secondary_color": selected_secondary_color,
 		"blood": Bloods[randi_range(0,3)]
 	}
-	var pet = preload("res://Centipede.tscn").instantiate()
+	var pet = preload("res://centipede.tscn").instantiate()
 	pet.position = get_viewport_rect().size / 2
 	alive.add_child(pet)
 	#$AudioStreamPlayer.play()
@@ -106,7 +106,7 @@ func _Rgenerate():
 		"secondary_color": Color1[randi_range(0,7)],
 		"blood": Bloods[randi_range(0,3)]
 	}
-	var pet = preload("res://Centipede.tscn").instantiate()
+	var pet = preload("res://centipede.tscn").instantiate()
 	pet.position = get_viewport_rect().size / 2
 	alive.add_child(pet)
 	#$AudioStreamPlayer.play()

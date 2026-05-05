@@ -41,7 +41,7 @@ func setup(data):
 	var chosen_texture = pool[randi() % pool.size()]
 
 	for i in range(segment_count):
-		var seg = preload("res://Segment.tscn").instantiate()
+		var seg = preload("res://segment.tscn").instantiate()
 		add_child(seg)
 		var dead_parts = get_tree().current_scene.get_node("PetContainer/Dead")
 		var blood = get_tree().current_scene.get_node("PetContainer/Blood")

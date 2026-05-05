@@ -11,26 +11,92 @@ bg_color = Color(0.1882353, 0.13725491, 0.1254902, 0.8509804)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_son8g"]
 bg_color = Color(0.54509807, 0.30980393, 0.12941177, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7tpdp"]
+bg_color = Color(0.54509807, 0.30980393, 0.12941177, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.93333334, 0.90588236, 0.87058824, 1)
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_wowgf"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nyo1w"]
 bg_color = Color(0.8039216, 0.3137255, 0.16470589, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wowgf"]
+bg_color = Color(0.8039216, 0.3137255, 0.16470589, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.93333334, 0.90588236, 0.87058824, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vy4vr"]
 bg_color = Color(0.91764706, 0.627451, 0.08235294, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jmtrr"]
+bg_color = Color(0.91764706, 0.627451, 0.08235294, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.93333334, 0.90588236, 0.87058824, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3relh"]
 bg_color = Color(0.6862745, 0.7764706, 0.32156864, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bclac"]
+bg_color = Color(0.6862745, 0.7764706, 0.32156864, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.93333334, 0.90588236, 0.87058824, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yth6m"]
 bg_color = Color(0.3882353, 0.73333335, 0.5764706, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8lvev"]
+bg_color = Color(0.3882353, 0.73333335, 0.5764706, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.93333334, 0.90588236, 0.87058824, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wia6c"]
 bg_color = Color(0.2784314, 0.59607846, 0.6862745, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u42uo"]
+bg_color = Color(0.2784314, 0.59607846, 0.6862745, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.93333334, 0.90588236, 0.87058824, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jj0sx"]
 bg_color = Color(0.33333334, 0.32156864, 0.69803923, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y15bj"]
+bg_color = Color(0.33333334, 0.32156864, 0.69803923, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.93333334, 0.90588236, 0.87058824, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jcewj"]
 bg_color = Color(0.9137255, 0.49803922, 0.6313726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a6ahi"]
+bg_color = Color(0.9137255, 0.49803922, 0.6313726, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.93333334, 0.90588236, 0.87058824, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_vy4vr"]
 font = ExtResource("2_nyo1w")
@@ -39,26 +105,92 @@ font_color = Color(0.93333334, 0.90588236, 0.87058824, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3rf72"]
 bg_color = Color(0.54509807, 0.30980393, 0.12941177, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_apdok"]
+bg_color = Color(0.54509807, 0.30980393, 0.12941177, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_vy4vr"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u0nyb"]
 bg_color = Color(0.8039216, 0.3137255, 0.16470589, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p7cte"]
+bg_color = Color(0.8039216, 0.3137255, 0.16470589, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.93333334, 0.90588236, 0.87058824, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x7rod"]
 bg_color = Color(0.91764706, 0.627451, 0.08235294, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vpbii"]
+bg_color = Color(0.91764706, 0.627451, 0.08235294, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.93333334, 0.90588236, 0.87058824, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3mmab"]
 bg_color = Color(0.6862745, 0.7764706, 0.32156864, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r57la"]
+bg_color = Color(0.6862745, 0.7764706, 0.32156864, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.93333334, 0.90588236, 0.87058824, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kjjdm"]
 bg_color = Color(0.3882353, 0.73333335, 0.5764706, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iy5c0"]
+bg_color = Color(0.3882353, 0.73333335, 0.5764706, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.93333334, 0.90588236, 0.87058824, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pmio3"]
 bg_color = Color(0.2784314, 0.59607846, 0.6862745, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iueqa"]
+bg_color = Color(0.2784314, 0.59607846, 0.6862745, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.93333334, 0.90588236, 0.87058824, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v57v3"]
 bg_color = Color(0.33333334, 0.32156864, 0.69803923, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oevga"]
+bg_color = Color(0.33333334, 0.32156864, 0.69803923, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.93333334, 0.90588236, 0.87058824, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pvcc6"]
 bg_color = Color(0.9137255, 0.49803922, 0.6313726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w0rmn"]
+bg_color = Color(0.9137255, 0.49803922, 0.6313726, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.93333334, 0.90588236, 0.87058824, 1)
 
 [node name="Main" type="Node2D" unique_id=1465816183]
 script = ExtResource("1_4j51b")
@@ -191,6 +323,10 @@ offset_top = 426.0
 offset_right = 48.0
 offset_bottom = 454.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_son8g")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7tpdp")
+toggle_mode = true
+button_pressed = true
+button_group = SubResource("ButtonGroup_wowgf")
 
 [node name="Color2" type="Button" parent="Ui/Panel" unique_id=409700063]
 layout_mode = 0
@@ -199,6 +335,9 @@ offset_top = 426.0
 offset_right = 79.0
 offset_bottom = 454.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_nyo1w")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wowgf")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_wowgf")
 
 [node name="Color3" type="Button" parent="Ui/Panel" unique_id=405842338]
 layout_mode = 0
@@ -207,6 +346,9 @@ offset_top = 426.0
 offset_right = 110.0
 offset_bottom = 454.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_vy4vr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jmtrr")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_wowgf")
 
 [node name="Color4" type="Button" parent="Ui/Panel" unique_id=1015465062]
 layout_mode = 0
@@ -215,6 +357,9 @@ offset_top = 426.0
 offset_right = 141.0
 offset_bottom = 454.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_3relh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bclac")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_wowgf")
 
 [node name="Color5" type="Button" parent="Ui/Panel" unique_id=1202151920]
 layout_mode = 0
@@ -223,6 +368,9 @@ offset_top = 426.0
 offset_right = 172.0
 offset_bottom = 454.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_yth6m")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8lvev")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_wowgf")
 
 [node name="Color6" type="Button" parent="Ui/Panel" unique_id=1159979669]
 layout_mode = 0
@@ -231,6 +379,9 @@ offset_top = 426.0
 offset_right = 203.0
 offset_bottom = 454.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_wia6c")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_u42uo")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_wowgf")
 
 [node name="Color7" type="Button" parent="Ui/Panel" unique_id=1309530706]
 layout_mode = 0
@@ -239,6 +390,9 @@ offset_top = 426.0
 offset_right = 234.0
 offset_bottom = 454.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_jj0sx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_y15bj")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_wowgf")
 
 [node name="Color8" type="Button" parent="Ui/Panel" unique_id=1087839332]
 layout_mode = 0
@@ -247,6 +401,9 @@ offset_top = 426.0
 offset_right = 265.0
 offset_bottom = 454.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_jcewj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_a6ahi")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_wowgf")
 
 [node name="TextEdit" type="Label" parent="Ui/Panel" unique_id=1324977305]
 layout_mode = 0
@@ -336,6 +493,9 @@ offset_top = 494.0
 offset_right = 48.0
 offset_bottom = 522.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_3rf72")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_apdok")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_vy4vr")
 
 [node name="Color10" type="Button" parent="Ui/Panel" unique_id=1836834491]
 layout_mode = 0
@@ -344,6 +504,10 @@ offset_top = 494.0
 offset_right = 79.0
 offset_bottom = 522.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_u0nyb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_p7cte")
+toggle_mode = true
+button_pressed = true
+button_group = SubResource("ButtonGroup_vy4vr")
 
 [node name="Color11" type="Button" parent="Ui/Panel" unique_id=1052797528]
 layout_mode = 0
@@ -352,6 +516,9 @@ offset_top = 494.0
 offset_right = 110.0
 offset_bottom = 522.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_x7rod")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vpbii")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_vy4vr")
 
 [node name="Color12" type="Button" parent="Ui/Panel" unique_id=1649768277]
 layout_mode = 0
@@ -360,6 +527,9 @@ offset_top = 494.0
 offset_right = 141.0
 offset_bottom = 522.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_3mmab")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r57la")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_vy4vr")
 
 [node name="Color13" type="Button" parent="Ui/Panel" unique_id=1175106609]
 layout_mode = 0
@@ -368,6 +538,9 @@ offset_top = 494.0
 offset_right = 172.0
 offset_bottom = 522.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_kjjdm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_iy5c0")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_vy4vr")
 
 [node name="Color14" type="Button" parent="Ui/Panel" unique_id=1370378492]
 layout_mode = 0
@@ -376,6 +549,9 @@ offset_top = 494.0
 offset_right = 203.0
 offset_bottom = 522.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_pmio3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_iueqa")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_vy4vr")
 
 [node name="Color15" type="Button" parent="Ui/Panel" unique_id=550399166]
 layout_mode = 0
@@ -384,6 +560,9 @@ offset_top = 494.0
 offset_right = 234.0
 offset_bottom = 522.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_v57v3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oevga")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_vy4vr")
 
 [node name="Color16" type="Button" parent="Ui/Panel" unique_id=278861899]
 layout_mode = 0
@@ -392,6 +571,9 @@ offset_top = 494.0
 offset_right = 265.0
 offset_bottom = 522.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_pvcc6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_w0rmn")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_vy4vr")
 
 [node name="TextEdit9" type="Label" parent="Ui/Panel" unique_id=1654477867]
 layout_mode = 0

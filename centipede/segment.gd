@@ -137,7 +137,7 @@ func propagate(direction: int):
 		explode()
 		
 		
-	$SquishSound.play()
+	#$SquishSound.play()
 	#await get_tree().create_timer(0.075).timeout
 	
 	if direction == -1 and prev_segment:
