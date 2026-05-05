@@ -63,6 +63,8 @@ bg_color = Color(0.9137255, 0.49803922, 0.6313726, 1)
 script = ExtResource("1_4j51b")
 
 [node name="Background" type="Polygon2D" parent="." unique_id=1171298708]
+position = Vector2(-156, -81.00001)
+scale = Vector2(1.3491254, 1.2502732)
 color = Color(0.93333334, 0.90588236, 0.87058824, 1)
 polygon = PackedVector2Array(270, -137, 1225, -116, 1242, 768, -112, 778, -130, -81)
 

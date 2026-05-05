@@ -52,7 +52,7 @@ func setup(data, seg_index, texture, dead_parts, blood):
 	overlay.scale = Vector2.ONE
 	overlay.modulate = data.secondary_color
 
-	var leg_tex = preload("res://assets/leg_bent.png")
+	var leg_tex = preload("res://assets/leg_bent_lessScary.png")
 	left_leg.texture = leg_tex
 	left_leg.scale = Vector2.ONE * data.size * 0.05 * data.legs
 	left_leg.scale.x = -left_leg.scale.x
@@ -190,7 +190,7 @@ func _process(delta):
 			splatter.texture = blood_textures[randi() % blood_textures.size()]
 			splatter.rotation = randf_range(0, TAU)
 			splatter.scale = Vector2.ONE * seg_size *part.velocity.length() *0.0005 
-			splatter.modulate =  Color("#e861c5")
+			splatter.modulate =  Color("#302320")
 			blood_node.add_child(splatter)
 			splatter.global_position = part.node.global_position
 
