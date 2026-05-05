@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bwaun1mu086rd"]
 
 [ext_resource type="Script" uid="uid://cgbt1ak7pihvn" path="res://centipede_scene.gd" id="1_4j51b"]
+[ext_resource type="FontFile" uid="uid://b5pwnasr6dt8e" path="res://Fonts/Jost-VariableFont_wght.ttf" id="2_nyo1w"]
 [ext_resource type="AudioStream" uid="uid://6c55m7p4n06r" path="res://Sound/CRAWL FINAL.wav" id="2_son8g"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4j51b"]
@@ -30,7 +31,8 @@ bg_color = Color(0.33333334, 0.32156864, 0.69803923, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jcewj"]
 bg_color = Color(0.9137255, 0.49803922, 0.6313726, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_son8g"]
+[sub_resource type="LabelSettings" id="LabelSettings_vy4vr"]
+font = ExtResource("2_nyo1w")
 font_color = Color(0.93333334, 0.90588236, 0.87058824, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3rf72"]
@@ -97,6 +99,7 @@ offset_left = 14.0
 offset_top = 563.0
 offset_right = 94.0
 offset_bottom = 595.0
+theme_override_fonts/font = ExtResource("2_nyo1w")
 text = "Generate"
 
 [node name="TypeDropdown" type="OptionButton" parent="Ui/Panel" unique_id=1857326444]
@@ -105,6 +108,7 @@ offset_left = 20.0
 offset_top = 40.0
 offset_right = 225.0
 offset_bottom = 71.0
+theme_override_fonts/font = ExtResource("2_nyo1w")
 selected = 2
 item_count = 3
 popup/item_0/text = "Spiky"
@@ -250,7 +254,7 @@ offset_bottom = 36.0
 pivot_offset = Vector2(215, 368)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Segment Shape"
-label_settings = SubResource("LabelSettings_son8g")
+label_settings = SubResource("LabelSettings_vy4vr")
 
 [node name="TextEdit2" type="Label" parent="Ui/Panel" unique_id=1972812785]
 layout_mode = 0
@@ -260,7 +264,7 @@ offset_right = 144.0
 offset_bottom = 112.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Segment Size"
-label_settings = SubResource("LabelSettings_son8g")
+label_settings = SubResource("LabelSettings_vy4vr")
 
 [node name="TextEdit3" type="Label" parent="Ui/Panel" unique_id=1067887364]
 layout_mode = 0
@@ -270,7 +274,7 @@ offset_right = 144.0
 offset_bottom = 160.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Segment Count"
-label_settings = SubResource("LabelSettings_son8g")
+label_settings = SubResource("LabelSettings_vy4vr")
 
 [node name="TextEdit4" type="Label" parent="Ui/Panel" unique_id=681351352]
 layout_mode = 0
@@ -280,7 +284,7 @@ offset_right = 146.0
 offset_bottom = 211.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Segment Distance"
-label_settings = SubResource("LabelSettings_son8g")
+label_settings = SubResource("LabelSettings_vy4vr")
 
 [node name="TextEdit5" type="Label" parent="Ui/Panel" unique_id=1372505850]
 layout_mode = 0
@@ -290,7 +294,7 @@ offset_right = 163.0
 offset_bottom = 265.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Antennae Length"
-label_settings = SubResource("LabelSettings_son8g")
+label_settings = SubResource("LabelSettings_vy4vr")
 
 [node name="TextEdit6" type="Label" parent="Ui/Panel" unique_id=248063686]
 layout_mode = 0
@@ -300,7 +304,7 @@ offset_right = 163.0
 offset_bottom = 320.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Leg Length"
-label_settings = SubResource("LabelSettings_son8g")
+label_settings = SubResource("LabelSettings_vy4vr")
 
 [node name="TextEdit7" type="Label" parent="Ui/Panel" unique_id=396537778]
 layout_mode = 0
@@ -310,7 +314,7 @@ offset_right = 163.0
 offset_bottom = 371.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Tail Length"
-label_settings = SubResource("LabelSettings_son8g")
+label_settings = SubResource("LabelSettings_vy4vr")
 
 [node name="TextEdit8" type="Label" parent="Ui/Panel" unique_id=655342812]
 layout_mode = 0
@@ -320,7 +324,7 @@ offset_right = 163.0
 offset_bottom = 426.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Primary Color"
-label_settings = SubResource("LabelSettings_son8g")
+label_settings = SubResource("LabelSettings_vy4vr")
 
 [node name="Color9" type="Button" parent="Ui/Panel" unique_id=2068533225]
 layout_mode = 0
@@ -394,7 +398,7 @@ offset_right = 163.0
 offset_bottom = 494.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Secondary Color"
-label_settings = SubResource("LabelSettings_son8g")
+label_settings = SubResource("LabelSettings_vy4vr")
 
 [node name="RGenerate" type="Button" parent="Ui/Panel" unique_id=1759977466]
 custom_minimum_size = Vector2(20, 20)
@@ -403,6 +407,7 @@ offset_left = 97.0
 offset_top = 563.0
 offset_right = 285.0
 offset_bottom = 595.0
+theme_override_fonts/font = ExtResource("2_nyo1w")
 text = "1 Random Centipede Plz"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1584131838]
