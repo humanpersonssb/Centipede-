@@ -11,6 +11,8 @@ var main_scene: Node = null
 @onready var click_area = $ClickArea
 @onready var shape = $ClickArea/Shape
 
+
+
 var blood_textures = [
 	preload("res://assets/splatter_1.png"),
 	preload("res://assets/splatter_2.png"),
@@ -30,6 +32,10 @@ var flying_parts: Array = []
 var dead_parts_node: Node = null
 
 func setup(data, seg_index, texture, dead_parts, blood):
+	
+	
+	
+	
 	main_scene = get_tree().current_scene
 	blood_node = blood
 	dead_parts_node = dead_parts
@@ -60,6 +66,8 @@ func setup(data, seg_index, texture, dead_parts, blood):
 
 	var ant_tex = preload("res://assets/leg_lowerarm.png")
 	if is_head:
+		$WalkSound.play()
+		
 		antennae_l.texture = ant_tex
 		antennae_l.scale = Vector2.ONE * data.size * 0.05
 		antennae_l.scale.y = data.antenna * 0.05
@@ -90,11 +98,19 @@ func on_clicked():
 	if exploded:
 		return
 	explode()
-	await get_tree().create_timer(0.075).timeout
+	
+	
+	$SquishSound.play()
+	
+	
 	if prev_segment:
 		prev_segment.propagate(-1)
 	if next_segment:
 		next_segment.propagate(1)
+		
+	await get_tree().create_timer(0.5).timeout
+	
+	$GaspSound.play()
 
 
 func propagate(direction: int):
@@ -102,8 +118,8 @@ func propagate(direction: int):
 		explode()
 		
 		
-		
-	await get_tree().create_timer(0.075).timeout
+	$SquishSound.play()
+	#await get_tree().create_timer(0.075).timeout
 	
 	if direction == -1 and prev_segment:
 		prev_segment.propagate(-1)
@@ -114,6 +130,7 @@ func propagate(direction: int):
 
 
 func explode():
+	$WalkSound.stop()
 	if exploded:
 		return
 	main_scene.add_shake(2.0)
@@ -128,9 +145,9 @@ func explode():
 	for part in parts:
 		if not is_instance_valid(part) or not part.visible:
 			continue
-		var velocity = Vector2(randf_range(-120, 120), randf_range(-120, 120))
-		var spin = randf_range(-5.0, 5.0)
-		var velocity_drag = randf_range(2, 10)
+		var velocity = Vector2(randf_range(-520, 520), randf_range(-520, 520))
+		var spin = randf_range(-10.0, 10.0)
+		var velocity_drag = randf_range(4, 10)
 		var spin_drag = randf_range(3, 5.0)
 		var is_body = part == body
 		part.reparent(dead_parts_node)
@@ -158,11 +175,11 @@ func _process(delta):
 		part.spin = lerpf(part.spin, 0.0, delta * part.spin_drag)
 		
 		#blood trails
-		if part.is_body and part.velocity.length() > 0.05 and is_instance_valid(blood_node):
+		if part.is_body and part.velocity.length() > 0.1 and is_instance_valid(blood_node):
 			var splatter = Sprite2D.new()
 			splatter.texture = blood_textures[randi() % blood_textures.size()]
 			splatter.rotation = randf_range(0, TAU)
-			splatter.scale = Vector2.ONE * seg_size *part.velocity.length() *0.001
+			splatter.scale = Vector2.ONE * seg_size *part.velocity.length() *0.0005 
 			splatter.modulate =  Color("#e861c5")
 			blood_node.add_child(splatter)
 			splatter.global_position = part.node.global_position
