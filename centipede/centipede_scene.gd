@@ -30,6 +30,7 @@ func _ready():
 	#$Ui/Panel/Color15.pressed.connect(func(): selected_secondary_color = Color("626624"))
 	#$Ui/Panel/Color16.pressed.connect(func(): selected_secondary_color = Color("1b5761"))
 	$Ui/Panel/Generate.pressed.connect(_generate)
+	$Ui/Panel/RGenerate.pressed.connect(_Rgenerate)
 	$Ui/Panel/Color.pressed.connect(func(): selected_color = Color("8b4f21"))
 	$Ui/Panel/Color2.pressed.connect(func(): selected_color = Color("cd502a"))
 	$Ui/Panel/Color3.pressed.connect(func(): selected_color = Color("eaa015"))
@@ -67,6 +68,25 @@ func _generate():
 	pet.setup(settings)
 	
 	
+func _Rgenerate():
+	var panel = $Ui/Panel
+	var dropdown = $Ui/Panel/TypeDropdown
+	var settings = {
+		"type": dropdown.get_item_text(dropdown.selected).to_lower(),
+		"size": panel.get_node("SizeSlider").value,
+		"segments": int(panel.get_node("SegmentSlider").value),
+		"spacing": panel.get_node("SpacingSlider").value,
+		"antenna": panel.get_node("AntennaSlider").value,
+		"legs": panel.get_node("LegSlider").value,
+		"tail": panel.get_node("TailSlider").value,
+		"color": selected_color,
+		"secondary_color": selected_secondary_color
+	}
+	var pet = preload("res://Centipede.tscn").instantiate()
+	pet.position = get_viewport_rect().size / 2
+	alive.add_child(pet)
+	#$AudioStreamPlayer.play()
+	pet.setup(settings)
 #scrreenshoake	
 @onready var camera = $Camera2D
 
