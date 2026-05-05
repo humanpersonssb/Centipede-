@@ -13,10 +13,10 @@ var main_scene: Node = null
 
 
 var Bloods = [
-	Color("FF0097"),
-	Color("000000"),
-	Color("eaa015"),
-	Color("BF00FF")
+	Color("be5ca6"),
+	Color("302320"),
+	Color("b3a338"),
+	Color("418c66")
 ]
 var blood_textures = [
 	preload("res://assets/splatter_1.png"),

@@ -8,10 +8,10 @@ extends Node2D
 
 
 var Bloods = [
-	Color("FF0097"),
-	Color("000000"),
+	Color("ee37a3"),
+	Color("302320"),
 	Color("eaa015"),
-	Color("BF00FF")
+	Color("b3a338")
 ]
 var selected_color = Color("8b4f21")
 var selected_secondary_color = Color("cd502a")
