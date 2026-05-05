@@ -387,3 +387,4 @@ position = Vector2(578, 324)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=177067869]
 stream = ExtResource("2_son8g")
+max_polyphony = 100
