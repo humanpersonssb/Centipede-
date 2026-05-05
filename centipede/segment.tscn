@@ -9,6 +9,9 @@
 [ext_resource type="AudioStream" uid="uid://3a5cvynrb5um" path="res://Sound/squish scream.wav" id="7_dgbe3"]
 [ext_resource type="AudioStream" uid="uid://15bffl7kohw8" path="res://Sound/gasp2.wav" id="8_0c8ax"]
 [ext_resource type="AudioStream" uid="uid://c3og3tb0vmjh5" path="res://Sound/crawl_not_gross.wav" id="8_dm62h"]
+[ext_resource type="AudioStream" uid="uid://c5r1p24l0af7f" path="res://Sound/gasp3.wav" id="9_ppvto"]
+[ext_resource type="AudioStream" uid="uid://dv3rugg4658o6" path="res://Sound/gasp4.wav" id="10_f5bgb"]
+[ext_resource type="AudioStream" uid="uid://cfxdd1tmi3lvd" path="res://Sound/gasp5.wav" id="11_qyc0u"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bkcha"]
 radius = 161.02795
@@ -47,13 +50,41 @@ max_polyphony = 1000
 [node name="GaspSound" type="AudioStreamPlayer" parent="." unique_id=401843697]
 unique_name_in_owner = true
 stream = ExtResource("7_dgbe3")
-volume_db = 10.0
+volume_db = 5.0
 max_polyphony = 1000
 
 [node name="GaspSound2" type="AudioStreamPlayer" parent="." unique_id=1899417579]
 unique_name_in_owner = true
 stream = ExtResource("8_0c8ax")
-volume_db = 10.0
+volume_db = 5.0
+pitch_scale = 1.2
+max_polyphony = 1000
+
+[node name="GaspSound3" type="AudioStreamPlayer" parent="." unique_id=1964437221]
+unique_name_in_owner = true
+stream = ExtResource("9_ppvto")
+volume_db = 5.0
+pitch_scale = 1.2
+max_polyphony = 1000
+
+[node name="GaspSound4" type="AudioStreamPlayer" parent="." unique_id=1133727546]
+unique_name_in_owner = true
+stream = ExtResource("10_f5bgb")
+volume_db = 5.0
+pitch_scale = 1.2
+max_polyphony = 1000
+
+[node name="GaspSound5" type="AudioStreamPlayer" parent="." unique_id=1202714203]
+unique_name_in_owner = true
+stream = ExtResource("11_qyc0u")
+volume_db = 5.0
+pitch_scale = 1.2
+max_polyphony = 1000
+
+[node name="GaspSound6" type="AudioStreamPlayer" parent="." unique_id=878619567]
+unique_name_in_owner = true
+stream = ExtResource("8_0c8ax")
+volume_db = 5.0
 pitch_scale = 1.2
 max_polyphony = 1000
 
