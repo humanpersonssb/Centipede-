@@ -29,6 +29,9 @@ func _ready():
 	#$Ui/Panel/Color14.pressed.connect(func(): selected_secondary_color = Color("846d7e"))
 	#$Ui/Panel/Color15.pressed.connect(func(): selected_secondary_color = Color("626624"))
 	#$Ui/Panel/Color16.pressed.connect(func(): selected_secondary_color = Color("1b5761"))
+	
+	
+	
 	$Ui/Panel/Generate.pressed.connect(_generate)
 	$Ui/Panel/RGenerate.pressed.connect(_Rgenerate)
 	$Ui/Panel/Color.pressed.connect(func(): selected_color = Color("8b4f21"))
@@ -48,6 +51,8 @@ func _ready():
 	$Ui/Panel/Color15.pressed.connect(func(): selected_secondary_color = Color("5552b2"))
 	$Ui/Panel/Color16.pressed.connect(func(): selected_secondary_color = Color("e97fa1"))
 func _generate():
+	if(!$Music.playing):
+		$Music.play()
 	var panel = $Ui/Panel
 	var dropdown = $Ui/Panel/TypeDropdown
 	var settings = {
@@ -93,6 +98,8 @@ func _Rgenerate():
 var shake_amount: float = 0.0
 
 func add_shake(amount: float):
+	$Music.stop()
+	
 	shake_amount += amount
 
 func _process(delta):

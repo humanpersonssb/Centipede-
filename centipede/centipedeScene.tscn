@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cgbt1ak7pihvn" path="res://centipede_scene.gd" id="1_4j51b"]
 [ext_resource type="FontFile" uid="uid://b5pwnasr6dt8e" path="res://Fonts/Jost-VariableFont_wght.ttf" id="2_nyo1w"]
 [ext_resource type="AudioStream" uid="uid://6c55m7p4n06r" path="res://Sound/CRAWL FINAL.wav" id="2_son8g"]
+[ext_resource type="AudioStream" uid="uid://3oqhq4fe8nv7" path="res://Sound/centiSong Sped Up Final.wav" id="4_vy4vr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4j51b"]
 bg_color = Color(0.1882353, 0.13725491, 0.1254902, 0.8509804)
@@ -417,4 +418,9 @@ position = Vector2(578, 324)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=177067869]
 stream = ExtResource("2_son8g")
+max_polyphony = 100
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1929835584]
+stream = ExtResource("4_vy4vr")
+autoplay = true
 max_polyphony = 100
