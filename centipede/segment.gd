@@ -112,11 +112,19 @@ func on_clicked():
 	await get_tree().create_timer(0.5).timeout
 	
 	
-	var random = randi_range(0,1)
-	if random==1:
+	var random = randi_range(0,6)
+	if random==0:
 		$GaspSound2.play()
+	elif random==1:
+		$GaspSound3.play()
+	elif random==2:
+		$GaspSound4.play()
+	elif random==3:
+		$GaspSound5.play()
+	elif random==4:
+		$GaspSound5.play()
 	else:
-		$GaspSound.play()
+		$GaspSound6.play()
 
 
 func propagate(direction: int):
