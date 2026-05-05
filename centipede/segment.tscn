@@ -7,7 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://0sdf8fo55nx2" path="res://assets/leg_upperarm.png" id="5_0c8ax"]
 [ext_resource type="AudioStream" uid="uid://vlo2qcjw7pyo" path="res://Sound/squish squish.wav" id="6_3mqu2"]
 [ext_resource type="AudioStream" uid="uid://3a5cvynrb5um" path="res://Sound/squish scream.wav" id="7_dgbe3"]
-[ext_resource type="AudioStream" uid="uid://6c55m7p4n06r" path="res://Sound/CRAWL FINAL.wav" id="8_dm62h"]
+[ext_resource type="AudioStream" uid="uid://15bffl7kohw8" path="res://Sound/gasp2.wav" id="8_0c8ax"]
+[ext_resource type="AudioStream" uid="uid://c3og3tb0vmjh5" path="res://Sound/crawl_not_gross.wav" id="8_dm62h"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bkcha"]
 radius = 161.02795
@@ -47,6 +48,13 @@ max_polyphony = 1000
 unique_name_in_owner = true
 stream = ExtResource("7_dgbe3")
 volume_db = 10.0
+max_polyphony = 1000
+
+[node name="GaspSound2" type="AudioStreamPlayer" parent="." unique_id=1899417579]
+unique_name_in_owner = true
+stream = ExtResource("8_0c8ax")
+volume_db = 10.0
+pitch_scale = 1.2
 max_polyphony = 1000
 
 [node name="WalkSound" type="AudioStreamPlayer" parent="." unique_id=605744325]

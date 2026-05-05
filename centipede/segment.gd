@@ -92,6 +92,7 @@ func setup(data, seg_index, texture, dead_parts, blood):
 func _on_area_input(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		on_clicked()
+	
 
 func on_clicked():
 	#print(index)
@@ -110,7 +111,12 @@ func on_clicked():
 		
 	await get_tree().create_timer(0.5).timeout
 	
-	$GaspSound.play()
+	
+	var random = randi_range(0,1)
+	if random==1:
+		$GaspSound2.play()
+	else:
+		$GaspSound.play()
 
 
 func propagate(direction: int):
@@ -166,6 +172,10 @@ func explode():
 	#splatter.global_position = global_position
 
 func _process(delta):
+	
+	
+	
+	
 	for part in flying_parts:
 		if not is_instance_valid(part.node):
 			continue
