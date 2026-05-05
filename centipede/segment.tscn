@@ -19,12 +19,6 @@ radius = 161.02795
 [node name="Segment" type="Node2D" unique_id=1991091257]
 script = ExtResource("1_bkcha")
 
-[node name="Body" type="Sprite2D" parent="." unique_id=1824425741]
-texture = ExtResource("2_3mqu2")
-
-[node name="Overlay" type="Sprite2D" parent="Body" unique_id=218689406]
-texture = ExtResource("3_dgbe3")
-
 [node name="LeftLeg" type="Sprite2D" parent="." unique_id=305125549]
 texture = ExtResource("4_dm62h")
 
@@ -36,6 +30,12 @@ texture = ExtResource("5_0c8ax")
 
 [node name="AntennaeR" type="Sprite2D" parent="." unique_id=499022459]
 texture = ExtResource("5_0c8ax")
+
+[node name="Body" type="Sprite2D" parent="." unique_id=1824425741]
+texture = ExtResource("2_3mqu2")
+
+[node name="Overlay" type="Sprite2D" parent="Body" unique_id=218689406]
+texture = ExtResource("3_dgbe3")
 
 [node name="ClickArea" type="Area2D" parent="." unique_id=1804601787]
 
