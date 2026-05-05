@@ -96,11 +96,11 @@ func _Rgenerate():
 	var dropdown = $Ui/Panel/TypeDropdown
 	var settings = {
 		"type": dropdown.get_item_text(dropdown.selected).to_lower(),
-		"size": randi_range(0.5,2.5),
+		"size": randf_range(0.5,2.5),
 		"segments": randi_range(3,40),
-		"spacing": randi_range(5,20),
-		"antenna": randi_range(1,7),
-		"legs": randi_range(0.5,2),
+		"spacing": randf_range(5,20),
+		"antenna": randf_range(1,7),
+		"legs": randf_range(0.1,2),
 		"tail": randi_range(3,100),
 		"color": Color1[randi_range(0,7)],
 		"secondary_color": Color1[randi_range(0,7)],
