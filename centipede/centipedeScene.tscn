@@ -4,61 +4,61 @@
 [ext_resource type="AudioStream" uid="uid://6c55m7p4n06r" path="res://Sound/CRAWL FINAL.wav" id="2_son8g"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4j51b"]
-bg_color = Color(1, 1, 1, 1)
+bg_color = Color(1, 1, 1, 0.69411767)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_son8g"]
-bg_color = Color(0.1764706, 0.14117648, 0.4117647, 1)
+bg_color = Color(0.54509807, 0.30980393, 0.12941177, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nyo1w"]
-bg_color = Color(0.2784314, 0.20784314, 0.38431373, 1)
+bg_color = Color(0.8039216, 0.3137255, 0.16470589, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vy4vr"]
-bg_color = Color(0.20784314, 0.3254902, 0.3882353, 1)
+bg_color = Color(0.91764706, 0.627451, 0.08235294, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3relh"]
-bg_color = Color(0.40784314, 0.29803923, 0.39215687, 1)
+bg_color = Color(0.6862745, 0.7764706, 0.32156864, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yth6m"]
-bg_color = Color(0.1882353, 0.35686275, 0.32156864, 1)
+bg_color = Color(0.3882353, 0.73333335, 0.5764706, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wia6c"]
-bg_color = Color(0.39215687, 0.3647059, 0.23529412, 1)
+bg_color = Color(0.2784314, 0.59607846, 0.6862745, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jj0sx"]
-bg_color = Color(0.22352941, 0.21176471, 0.24705882, 1)
+bg_color = Color(0.33333334, 0.32156864, 0.69803923, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jcewj"]
-bg_color = Color(0.25882354, 0.30588236, 0.16470589, 1)
+bg_color = Color(0.9137255, 0.49803922, 0.6313726, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3rf72"]
-bg_color = Color(0.3137255, 0.27058825, 0.5058824, 1)
+bg_color = Color(0.54509807, 0.30980393, 0.12941177, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u0nyb"]
-bg_color = Color(0.5411765, 0.3372549, 0.42352942, 1)
+bg_color = Color(0.8039216, 0.3137255, 0.16470589, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x7rod"]
-bg_color = Color(0.59607846, 0.50980395, 0.39215687, 1)
+bg_color = Color(0.91764706, 0.627451, 0.08235294, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3mmab"]
-bg_color = Color(0.27058825, 0.40784314, 0.3882353, 1)
+bg_color = Color(0.6862745, 0.7764706, 0.32156864, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kjjdm"]
-bg_color = Color(0.38431373, 0.22352941, 0.06666667, 1)
+bg_color = Color(0.3882353, 0.73333335, 0.5764706, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pmio3"]
-bg_color = Color(0.5176471, 0.42745098, 0.49411765, 1)
+bg_color = Color(0.2784314, 0.59607846, 0.6862745, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v57v3"]
-bg_color = Color(0.38431373, 0.4, 0.14117648, 1)
+bg_color = Color(0.33333334, 0.32156864, 0.69803923, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pvcc6"]
-bg_color = Color(0.105882354, 0.34117648, 0.38039216, 1)
+bg_color = Color(0.9137255, 0.49803922, 0.6313726, 1)
 
 [node name="Main" type="Node2D" unique_id=1465816183]
 script = ExtResource("1_4j51b")
 
 [node name="Background" type="Polygon2D" parent="." unique_id=1171298708]
-color = Color(0.0627451, 0.050980393, 0.14509805, 0)
+color = Color(0.93333334, 0.90588236, 0.87058824, 1)
 polygon = PackedVector2Array(270, -137, 1225, -116, 1242, 768, -112, 778, -130, -81)
 
 [node name="PetContainer" type="Node2D" parent="." unique_id=1585421913]
@@ -82,7 +82,7 @@ anchor_top = 1.0
 anchor_bottom = 1.0
 offset_top = -40.0
 offset_right = 300.0
-offset_bottom = 560.0
+offset_bottom = 612.0
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_4j51b")
 
@@ -184,17 +184,17 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_son8g")
 [node name="Color2" type="Button" parent="Ui/Panel" unique_id=409700063]
 layout_mode = 0
 offset_left = 51.0
-offset_top = 339.0
+offset_top = 340.0
 offset_right = 79.0
-offset_bottom = 367.0
+offset_bottom = 368.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_nyo1w")
 
 [node name="Color3" type="Button" parent="Ui/Panel" unique_id=405842338]
 layout_mode = 0
 offset_left = 82.0
-offset_top = 339.0
+offset_top = 340.0
 offset_right = 110.0
-offset_bottom = 367.0
+offset_bottom = 368.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_vy4vr")
 
 [node name="Color4" type="Button" parent="Ui/Panel" unique_id=1015465062]
@@ -208,17 +208,17 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_3relh")
 [node name="Color5" type="Button" parent="Ui/Panel" unique_id=1202151920]
 layout_mode = 0
 offset_left = 144.0
-offset_top = 339.0
+offset_top = 340.0
 offset_right = 172.0
-offset_bottom = 367.0
+offset_bottom = 368.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_yth6m")
 
 [node name="Color6" type="Button" parent="Ui/Panel" unique_id=1159979669]
 layout_mode = 0
 offset_left = 175.0
-offset_top = 339.0
+offset_top = 340.0
 offset_right = 203.0
-offset_bottom = 367.0
+offset_bottom = 368.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_wia6c")
 
 [node name="Color7" type="Button" parent="Ui/Panel" unique_id=1309530706]
@@ -320,9 +320,9 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_3rf72")
 [node name="Color10" type="Button" parent="Ui/Panel" unique_id=1836834491]
 layout_mode = 0
 offset_left = 51.0
-offset_top = 396.0
+offset_top = 397.0
 offset_right = 79.0
-offset_bottom = 424.0
+offset_bottom = 425.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_u0nyb")
 
 [node name="Color11" type="Button" parent="Ui/Panel" unique_id=1052797528]
@@ -352,9 +352,9 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_kjjdm")
 [node name="Color14" type="Button" parent="Ui/Panel" unique_id=1370378492]
 layout_mode = 0
 offset_left = 175.0
-offset_top = 396.0
+offset_top = 397.0
 offset_right = 203.0
-offset_bottom = 424.0
+offset_bottom = 425.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_pmio3")
 
 [node name="Color15" type="Button" parent="Ui/Panel" unique_id=550399166]

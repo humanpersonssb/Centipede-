@@ -8,8 +8,8 @@ extends Node2D
 
 
 
-var selected_color = Color("2d2469")
-var selected_secondary_color = Color("504581")
+var selected_color = Color("8b4f21")
+var selected_secondary_color = Color("cd502a")
 
 func _ready():
 	#$Ui/Panel/Generate.pressed.connect(_generate)
@@ -30,22 +30,22 @@ func _ready():
 	#$Ui/Panel/Color15.pressed.connect(func(): selected_secondary_color = Color("626624"))
 	#$Ui/Panel/Color16.pressed.connect(func(): selected_secondary_color = Color("1b5761"))
 	$Ui/Panel/Generate.pressed.connect(_generate)
-	$Ui/Panel/Color.pressed.connect(func(): selected_color = Color("2d2469"))
-	$Ui/Panel/Color2.pressed.connect(func(): selected_color = Color("473562"))
-	$Ui/Panel/Color3.pressed.connect(func(): selected_color = Color("355363"))
-	$Ui/Panel/Color4.pressed.connect(func(): selected_color = Color("684c64"))
-	$Ui/Panel/Color5.pressed.connect(func(): selected_color = Color("305b52"))
-	$Ui/Panel/Color6.pressed.connect(func(): selected_color = Color("645d3c"))
-	$Ui/Panel/Color7.pressed.connect(func(): selected_color = Color("39363f"))
-	$Ui/Panel/Color8.pressed.connect(func(): selected_color = Color("424e2a"))
-	$Ui/Panel/Color9.pressed.connect(func(): selected_secondary_color = Color("504581"))
-	$Ui/Panel/Color10.pressed.connect(func(): selected_secondary_color = Color("8a566c"))
-	$Ui/Panel/Color11.pressed.connect(func(): selected_secondary_color = Color("988264"))
-	$Ui/Panel/Color12.pressed.connect(func(): selected_secondary_color = Color("456863"))
-	$Ui/Panel/Color13.pressed.connect(func(): selected_secondary_color = Color("623911"))
-	$Ui/Panel/Color14.pressed.connect(func(): selected_secondary_color = Color("846d7e"))
-	$Ui/Panel/Color15.pressed.connect(func(): selected_secondary_color = Color("626624"))
-	$Ui/Panel/Color16.pressed.connect(func(): selected_secondary_color = Color("1b5761"))
+	$Ui/Panel/Color.pressed.connect(func(): selected_color = Color("8b4f21"))
+	$Ui/Panel/Color2.pressed.connect(func(): selected_color = Color("cd502a"))
+	$Ui/Panel/Color3.pressed.connect(func(): selected_color = Color("eaa015"))
+	$Ui/Panel/Color4.pressed.connect(func(): selected_color = Color("afc652"))
+	$Ui/Panel/Color5.pressed.connect(func(): selected_color = Color("63bb93"))
+	$Ui/Panel/Color6.pressed.connect(func(): selected_color = Color("4798af"))
+	$Ui/Panel/Color7.pressed.connect(func(): selected_color = Color("5552b2"))
+	$Ui/Panel/Color8.pressed.connect(func(): selected_color = Color("e97fa1"))
+	$Ui/Panel/Color9.pressed.connect(func(): selected_secondary_color = Color("8b4f21"))
+	$Ui/Panel/Color10.pressed.connect(func(): selected_secondary_color = Color("cd502a"))
+	$Ui/Panel/Color11.pressed.connect(func(): selected_secondary_color = Color("eaa015"))
+	$Ui/Panel/Color12.pressed.connect(func(): selected_secondary_color = Color("afc652"))
+	$Ui/Panel/Color13.pressed.connect(func(): selected_secondary_color = Color("63bb93"))
+	$Ui/Panel/Color14.pressed.connect(func(): selected_secondary_color = Color("4798af"))
+	$Ui/Panel/Color15.pressed.connect(func(): selected_secondary_color = Color("5552b2"))
+	$Ui/Panel/Color16.pressed.connect(func(): selected_secondary_color = Color("e97fa1"))
 func _generate():
 	var panel = $Ui/Panel
 	var dropdown = $Ui/Panel/TypeDropdown
