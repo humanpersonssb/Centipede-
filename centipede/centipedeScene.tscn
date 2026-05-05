@@ -91,9 +91,9 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_4j51b")
 custom_minimum_size = Vector2(20, 20)
 layout_mode = 0
 offset_left = 20.0
-offset_top = 444.0
+offset_top = 449.0
 offset_right = 100.0
-offset_bottom = 475.0
+offset_bottom = 480.0
 text = "Generate"
 
 [node name="TypeDropdown" type="OptionButton" parent="Ui/Panel" unique_id=1857326444]
@@ -383,6 +383,16 @@ offset_right = 163.0
 offset_bottom = 396.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Secondary Color"
+
+[node name="RGenerate" type="Button" parent="Ui/Panel" unique_id=1759977466]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 0
+offset_left = 158.0
+offset_top = 438.0
+offset_right = 271.0
+offset_bottom = 492.0
+text = "1 Random 
+Centipede Plz"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1584131838]
 position = Vector2(578, 324)
