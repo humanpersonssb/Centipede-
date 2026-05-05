@@ -90,6 +90,8 @@ func _generate():
 	
 	
 func _Rgenerate():
+	if(!$Music.playing):
+		$Music.play()
 	var panel = $Ui/Panel
 	var dropdown = $Ui/Panel/TypeDropdown
 	var settings = {
